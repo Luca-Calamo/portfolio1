@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom"
+import { useEffect } from "react"
 import { projects } from "../data/projects"
 import styles from "./Project.module.css"
 
@@ -7,6 +8,10 @@ export default function Project() {
     const currentId = parseInt(id || "1")
     const project = projects.find((p) => p.id === currentId)
     const nextProject = projects.find((p) => p.id === currentId + 1)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [id])
 
     if (!project) {
         return (
@@ -20,36 +25,38 @@ export default function Project() {
     return (
         <article className={styles.project}>
             <div className={styles.container}>
-                <section className={styles.header}>
-                    <h1 className={styles.title}>{project.title}</h1>
-                    <div className={styles.metadata}>
-                        <div className={styles.metadataItem}>
-                            <span className={styles.label}>Role</span>
-                            <span className={styles.value}>{project.role}</span>
-                        </div>
-                        <div className={styles.metadataItem}>
-                            <span className={styles.label}>Year</span>
-                            <span className={styles.value}>{project.year}</span>
-                        </div>
-                        <div className={styles.metadataItem}>
-                            <span className={styles.label}>Tools</span>
-                            <div className={styles.toolsList}>
-                                {project.tools.map((tool) => (
-                                    <span key={tool} className={styles.tool}>
-                                        {tool}
-                                    </span>
-                                ))}
+                <div className={styles.heroSection}>
+                    <section className={styles.header}>
+                        <h1 className={styles.title}>{project.title}</h1>
+                        <div className={styles.metadata}>
+                            <div className={styles.metadataItem}>
+                                <span className={styles.label}>Role</span>
+                                <span className={styles.value}>{project.role}</span>
+                            </div>
+                            <div className={styles.metadataItem}>
+                                <span className={styles.label}>Year</span>
+                                <span className={styles.value}>{project.year}</span>
+                            </div>
+                            <div className={styles.metadataItem}>
+                                <span className={styles.label}>Tools</span>
+                                <div className={styles.toolsList}>
+                                    {project.tools.map((tool) => (
+                                        <span key={tool} className={styles.tool}>
+                                            {tool}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <div className={styles.mainImage}>
-                    {project.heroImage.endsWith('.mp4') ? (
-                        <video src={project.heroImage} autoPlay loop muted />
-                    ) : (
-                        <img src={project.heroImage} alt={project.title} />
-                    )}
+                    <div className={styles.mainImage}>
+                        {project.heroImage.endsWith('.mp4') ? (
+                            <video src={project.heroImage} autoPlay loop muted />
+                        ) : (
+                            <img src={project.heroImage} alt={project.title} />
+                        )}
+                    </div>
                 </div>
 
                 <section className={styles.section}>

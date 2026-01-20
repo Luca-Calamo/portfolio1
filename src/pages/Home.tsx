@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className={styles.home}>
             <section className={styles.hero}>
-                <h1 className={styles.title}>Hi I'm Luca</h1>
+                <h1 className={styles.title}>Hey there, I'm Luca!</h1>
                 <p className={styles.subtitle}>Digital Marketer / Designer</p>
             </section>
 

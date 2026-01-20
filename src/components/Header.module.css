@@ -1,9 +1,9 @@
 .header {
     position: sticky;
     top: 0;
-    background: white;
+    background-color: rgb(255, 253, 238);
     z-index: 100;
-    border-bottom: 1px solid #f0f0f0;
+
 }
 
 .container {
@@ -16,11 +16,11 @@
 }
 
 .logo {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 1.5em;
+    font-weight: bold;
     letter-spacing: 2px;
     text-decoration: none;
-    color: black;
+    color: #370b63;
 }
 
 .nav {
@@ -30,8 +30,9 @@
 
 .link {
     text-decoration: none;
-    color: black;
-    font-size: 14px;
+    color: #370b63;
+    font-size: 1.2em;
+    font-weight:600;
     letter-spacing: 1px;
     transition: opacity 0.3s ease;
 }

@@ -6,7 +6,10 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.container}>
                 <Link to="/" className={styles.logo}>
-                    LUCA
+                        <span style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                            <img src="/images/Purple Logo.svg" alt="Luca Calamo Logo" style={{ height: 48, width: 'auto', display: 'block' }} />
+                            {/* <span>LUCA CALAMO</span> */}
+                        </span>
                 </Link>
                 <nav className={styles.nav}>
                     <Link to="/" className={styles.link}>
