@@ -45,7 +45,11 @@ export default function Project() {
                 </section>
 
                 <div className={styles.mainImage}>
-                    <img src={project.heroImage} alt={project.title} />
+                    {project.heroImage.endsWith('.mp4') ? (
+                        <video src={project.heroImage} autoPlay loop muted />
+                    ) : (
+                        <img src={project.heroImage} alt={project.title} />
+                    )}
                 </div>
 
                 <section className={styles.section}>

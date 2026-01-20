@@ -12,16 +12,16 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Project 1",
-        role: "Design Strategy",
-        year: 2024,
-        heroImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-        description: "The intersection of artificial intelligence and human creativity has revolutionized how we approach design. Machine learning algorithms can now analyze design patterns, predict user behavior, and generate layout suggestions. However, the true magic happens when designers leverage these tools as collaborative partners rather than replacements. By understanding the capabilities and limitations of AI-driven design systems, creative professionals can focus on strategic thinking and emotional resonance while automation handles repetitive tasks.",
-        tools: ["Adobe XD", "Figma", "Adobe Illustrator"],
+        title: "Geometea",
+        role: "Graphic Design / Marketing", 
+        year: 2025,
+        heroImage: "/videos/Can.mp4",
+        description: "Geometea was designed to be striking visuals that would grab attention in stores. Each can uses 2D geometric to creat0 the illusion of depth and movement. The collection includes three unique flavors, Hibiscus, Oolong Matcha, and Chamomile, with each design using distinct shapes and color palettes to reflect the tea inside. The project focuses on how simple geometric forms can be used to build strong visual identity and communicate flavor through abstraction rather than imagery.",
+        tools: ["Adobe Illustrator", "Adobe Photoshop", "Blender"],
         images: [
-            "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
-            "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
-            "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop"
+            "/images/Hibiscus.png",
+            "/images/Oolong.png",
+            "/images/Chamomile.png"
         ]
     },
     {

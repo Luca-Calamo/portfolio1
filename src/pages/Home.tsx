@@ -18,11 +18,21 @@ export default function Home() {
                             to={`/project/${project.id}`}
                             className={styles.masonryItem}
                         >
-                            <img
-                                src={project.heroImage}
-                                alt={project.title}
-                                className={styles.image}
-                            />
+                            {project.heroImage.endsWith('.mp4') ? (
+                                <video
+                                    src={project.heroImage}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    className={styles.image}
+                                />
+                            ) : (
+                                <img
+                                    src={project.heroImage}
+                                    alt={project.title}
+                                    className={styles.image}
+                                />
+                            )}
                             <div className={styles.overlay}>
                                 <h3>{project.title}</h3>
                             </div>

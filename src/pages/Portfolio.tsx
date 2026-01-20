@@ -15,7 +15,11 @@ export default function Portfolio() {
                             className={styles.projectItem}
                         >
                             <div className={styles.projectImage}>
-                                <img src={project.heroImage} alt={project.title} />
+                                {project.heroImage.endsWith('.mp4') ? (
+                                    <video src={project.heroImage} autoPlay loop muted />
+                                ) : (
+                                    <img src={project.heroImage} alt={project.title} />
+                                )}
                             </div>
                             <div className={styles.projectInfo}>
                                 <h2>{project.title}</h2>
