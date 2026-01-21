@@ -16,7 +16,7 @@ export const projects: Project[] = [
         role: "Graphic Design / Marketing", 
         year: 2025,
         heroImage: "/videos/Can.mp4",
-        description: "Geometea was designed to be striking visuals that would grab attention in stores. Each can uses 2D geometric to creat0 the illusion of depth and movement. The collection includes three unique flavors, Hibiscus, Oolong Matcha, and Chamomile, with each design using distinct shapes and color palettes to reflect the tea inside. The project focuses on how simple geometric forms can be used to build strong visual identity and communicate flavor through abstraction rather than imagery.",
+        description: "Geometea was designed have striking visuals that would grab attention in stores. Each can uses 2D geometric patterns to create the illusion of depth and movement. The collection includes three unique flavors, Hibiscus, Oolong Matcha, and Chamomile, with each design using distinct shapes and color palettes to reflect the tea inside. The project focuses on how simple geometry can be used to build a strong visual and brand identity, helping brand recognition and appeal on crowded shelves.",
         tools: ["Adobe Illustrator", "Adobe Photoshop", "Blender"],
         images: [
             "/images/Hibiscus.png",

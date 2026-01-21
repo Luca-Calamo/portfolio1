@@ -1,7 +1,7 @@
 .header {
     position: sticky;
     top: 0;
-    background-color: rgb(255, 253, 238);
+    background-color: rgb(255, 254, 247);
     z-index: 100;
     margin-top: 10px;
 
@@ -22,9 +22,27 @@
     font-weight: bold;
     letter-spacing: 2px;
     text-decoration: none;
-    color: #370b63;
+    color: #71068b;
     position: absolute;
     left: 40px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.logo:hover {
+    animation: rotateShake 0.5s ease-in-out;
+}
+
+@keyframes rotateShake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
 }
 
 .nav {
@@ -34,7 +52,7 @@
 
 .link {
     text-decoration: none;
-    color: #370b63;
+    color: #71068b;
     font-size: 1.2em;
     font-weight:600;
     letter-spacing: 1px;

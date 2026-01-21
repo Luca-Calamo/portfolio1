@@ -11,7 +11,7 @@
 
 .title {
     font-size: 4rem;
-    color: #370b63;
+    color: #71068b;
     font-weight: bold;
     margin: 0 0 10px 0;
     letter-spacing: -1px;
@@ -19,10 +19,14 @@
 
 .subtitle {
     font-size: 2rem;
-    color: #370b63;
+    color: #71068b;
     margin: 0;
     font-weight: 500px;
     letter-spacing: 0.5px;
+}
+
+.under {
+    margin-top: 10px;
 }
 
 .featured {

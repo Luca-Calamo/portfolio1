@@ -104,12 +104,12 @@
 .tool {
     display: inline-block;
     padding: 6px 16px;
-    background: #fff;
-    border: 2px solid #370b63;
+    background-color: rgb(255, 254, 247);
+    border: 2px solid #71068b;
     border: 2px solid ; 
     border-radius: 8px;
     font-size: 14px;
-    color: #370b63;;
+    color: #71068b;;
     font-weight: 500;
     box-sizing: border-box;
 }
