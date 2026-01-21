@@ -16,7 +16,7 @@ export const projects: Project[] = [
         role: "Graphic Design / Marketing", 
         year: 2025,
         heroImage: "/videos/Can.mp4",
-        description: "Geometea was designed have striking visuals that would grab attention in stores. Each can uses 2D geometric patterns to create the illusion of depth and movement. The collection includes three unique flavors, Hibiscus, Oolong Matcha, and Chamomile, with each design using distinct shapes and color palettes to reflect the tea inside. The project focuses on how simple geometry can be used to build a strong visual and brand identity, helping brand recognition and appeal on crowded shelves.",
+        description: "The tea market is saturated with branding that leans heavily into being “holistic” or “close to nature,” often resulting in similar visuals and muted packaging. Geometea was created to intentionally flip that narrative and stand apart on the shelf. By using unique 2D geometric patterns on each can, Geometea presents an updated, modern interpretation of what a tea brand can be. In a crowded aisle defined by clichés and sameness, Geometea is a provocative outlier that creates a moment of visual disruption and invites curiosity before the first sip.",
         tools: ["Adobe Illustrator", "Adobe Photoshop", "Blender"],
         images: [
             "/images/Hibiscus.png",
