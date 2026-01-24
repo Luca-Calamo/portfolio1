@@ -9,46 +9,60 @@
 }
 
 .heroSection {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    column-gap: 80px;
+    row-gap: 60px;
+    align-items: start;
     min-height: 100vh;
     margin: -40px -40px 80px -40px;
     padding: 40px 40px;
 }
 
 .header {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+    display: contents;
 }
 
 .title {
-    font-size: 72px;
+    font-size: 7rem;
     font-weight: 700;
     margin: 0;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.1;
+    grid-column: 1 / -1;
+    text-align: center;
+
 }
 
 .metadata {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     padding-bottom: 50px;
     border-bottom: 1px solid #f0f0f0;
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .mainImage {
-    flex: 0 1 45%;
+    grid-column: 2;
+    grid-row: 2;
     width: 100%;
-    height: 100%;
     max-height: calc(100vh - 80px);
     aspect-ratio: 1 / 1;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.scrollButton {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+    padding-bottom: 60px;
 }
 
 .mainImage img,
@@ -61,20 +75,54 @@
 .metadataItem {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
+.mockupImage {
+    width: 100%;
+    aspect-ratio: 16 / 12;
+    border-radius: 8px;
+    overflow: hidden;
+    /* margin-bottom: 80px; */
+}
+
+.mockupImage img {
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+}
+
+
+
 .label {
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #666;
 }
 
 .value {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     color: #333;
+}
+
+.toolsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgb(255, 254, 247);
+    border: 2px solid #71068b;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #71068b;
+    font-weight: 500;
+    box-sizing: border-box;
 }
 
 .section {
@@ -103,13 +151,12 @@
 
 .tool {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 8px 20px;
     background-color: rgb(255, 254, 247);
     border: 2px solid #71068b;
-    border: 2px solid ; 
     border-radius: 8px;
-    font-size: 14px;
-    color: #71068b;;
+    font-size: 16px;
+    color: #71068b;
     font-weight: 500;
     box-sizing: border-box;
 }
@@ -130,8 +177,8 @@
 
 .toolImage img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 90%;
+    object-fit: contain;
 }
 
 .upNext {
@@ -212,6 +259,19 @@
         margin-bottom: 40px;
     }
 
+    .label {
+        font-size: 16px;
+    }
+
+    .value {
+        font-size: 24px;
+    }
+
+    .tool {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
     .mainImage {
         margin-bottom: 60px;
     }
@@ -252,6 +312,19 @@
         margin-bottom: 40px;
     }
 
+    .label {
+        font-size: 14px;
+    }
+
+    .value {
+        font-size: 18px;
+    }
+
+    .tool {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
     .section {
         margin-bottom: 40px;
     }
@@ -275,10 +348,6 @@
 
     .toolsList {
         gap: 10px;
-    }
-
-    .tool {
-        font-size: 12px;
     }
 
     .nextProjectLink {
