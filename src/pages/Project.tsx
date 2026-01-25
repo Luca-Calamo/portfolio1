@@ -74,7 +74,7 @@ export default function Project() {
                 </div>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>My Process</h2>
+                    <h2 className={styles.sectionTitle}>The Process</h2>
                     <p className={styles.description}>{project.description}</p>
                 </section>
 

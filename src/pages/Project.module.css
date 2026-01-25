@@ -1,6 +1,6 @@
 .project {
     min-height: 100vh;
-    padding: 40px 40px 100px;
+    padding: 120px 40px 100px;
 }
 
 .container {
@@ -242,7 +242,7 @@
 
 @media (max-width: 1024px) {
     .project {
-        padding: 60px 30px 80px;
+        padding: 120px 30px 80px;
     }
 
     .container {
