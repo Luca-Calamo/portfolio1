@@ -7,11 +7,18 @@
 }
 
 html,
-body,
-#root {
+body {
     width: 100%;
     height: 100%;
     background-color: rgb(255, 254, 247);
+}
+
+#root {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(255, 254, 247);
+    display: flex;
+    flex-direction: column;
 }
 
 body {
