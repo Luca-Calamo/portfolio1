@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import { projects } from "../data/projects"
-import styles from "./Portfolio.module.css"
+import {Link} from 'react-router-dom';
+import {projects} from '../data/projects';
+import styles from './Portfolio.module.css';
 
 export default function Portfolio() {
     return (
@@ -16,9 +16,17 @@ export default function Portfolio() {
                         >
                             <div className={styles.projectImage}>
                                 {project.heroImage.endsWith('.mp4') ? (
-                                    <video src={project.heroImage} autoPlay loop muted />
+                                    <video
+                                        src={project.heroImage}
+                                        autoPlay
+                                        loop
+                                        muted
+                                    />
                                 ) : (
-                                    <img src={project.heroImage} alt={project.title} />
+                                    <img
+                                        src={project.heroImage}
+                                        alt={project.title}
+                                    />
                                 )}
                             </div>
                             <div className={styles.projectInfo}>
@@ -30,5 +38,5 @@ export default function Portfolio() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
