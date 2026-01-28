@@ -3,6 +3,7 @@ import {useEffect, useRef} from 'react';
 import {projects} from '../data/projects';
 import styles from './Project.module.css';
 import Scroll from '../components/Scroll';
+import Horizontal_Scroll from '../components/Horizontal_Scroll';
 
 export default function Project() {
     const {id} = useParams<{id: string}>();
@@ -92,6 +93,8 @@ export default function Project() {
                     <h2 className={styles.sectionTitle}>The Process</h2>
                     <p className={styles.description}>{project.description}</p>
                 </section>
+
+                <Horizontal_Scroll images={project.images} />
 
                 <div className={styles.images_container}>
                     {project.images.map((img, index) => (
