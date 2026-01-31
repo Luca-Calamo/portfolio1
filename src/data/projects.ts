@@ -28,7 +28,7 @@ export const projects: Project[] = [
     },
     {
         id: 2,
-        role: 'Brand Design',
+        role: 'Design / Layout Design',
         title: 'G-Adventures Travel Magazine',
         year: 2024,
         heroImage: '/images/magazine/Front Cover Mockup.png',
@@ -37,8 +37,8 @@ export const projects: Project[] = [
         tools: ['Adobe InDesign', 'Adobe Photoshop'],
         images: [
             '/images/magazine/Front Cover Mockup.png',
-            '/images/magazine/VEnice Spread.png',
             '/images/magazine/Rome Spread Mockup.png',
+            '/images/magazine/VEnice Spread.png',
         ],
     },
     {
