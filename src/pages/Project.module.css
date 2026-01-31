@@ -1,112 +1,71 @@
-.project {
+/* .project {
     min-height: 100vh;
     padding: 40px 40px 100px;
-}
+} */
 
 .container {
-    max-width: 900px;
+    width: 70%;
+    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
 }
 
 .heroSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    column-gap: 80px;
-    row-gap: clamp(40px, 5vh, 60px);
-    align-items: stretch;
-    min-height: 100vh;
-    margin: -40px -40px 80px -40px;
-    padding: 40px 40px;
-}
-
-.header {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
 .title {
-    font-size: clamp(4rem, 8vh, 7rem);
-color: #71068b;
+    font-size: 3rem;
+    color: #71068b;
     font-weight: 700;
     margin: 0;
     letter-spacing: -1px;
-    line-height: 1.1;
-    grid-column: 1 / -1;
     text-align: center;
-
 }
 
 .metadata {
     display: flex;
-    flex-direction: column;
-    gap: clamp(30px, 4vh, 50px);
-    grid-column: 1;
-    grid-row: 2;
-    justify-content: space-between;
-    height: 100%;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: center;
+    /* height: 100%; */
 }
 
 .mainImage {
-    grid-column: 2;
-    grid-row: 2;
     width: 100%;
-    max-height: clamp(400px, 50vh, 600px);
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.scrollButton {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: clamp(-40px, -5vh, -60px);
-    padding-bottom: clamp(40px, 5vh, 60px);
+    height: auto;
+    flex: 1;
 }
 
 .mainImage img,
 .mainImage video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 400px;
+    object-fit: contain;
 }
 
 .metadataItem {
     display: flex;
     flex-direction: column;
-    gap: clamp(12px, 1.5vh, 16px);
 }
-
-.mockupImage {
-    width: 100%;
-    aspect-ratio: 16 / 12;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.mockupImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
 
 .label {
-    font-size: clamp(1.2rem, 1.8vh, 1.8rem);
+    font-size: 1;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #666;
+    color: #71068b;
 }
 
 .value {
-    font-size: clamp(1.8rem, 2.8vh, 1.8rem);
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: #333;
 }
-
 
 .toolsList {
     display: flex;
@@ -144,7 +103,6 @@ color: #71068b;
     margin: 0;
 }
 
-
 .toolImages {
     display: flex;
     flex-direction: column;
@@ -154,8 +112,10 @@ color: #71068b;
 
 .toolImage {
     width: 100%;
-    aspect-ratio: 16 / 12;
+    aspect-ratio: 1 / 1;
+    max-height: 500px;
     border-radius: 8px;
+    object-fit: contain;
     overflow: hidden;
 }
 
@@ -224,7 +184,7 @@ color: #71068b;
     color: white;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .project {
         padding: 60px 30px 80px;
     }
@@ -342,4 +302,4 @@ color: #71068b;
         margin-top: 40px;
         padding-top: 40px;
     }
-}
+} */
