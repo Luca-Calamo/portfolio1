@@ -17,7 +17,7 @@ export const projects: Project[] = [
         year: 2025,
         heroImage: '/videos/Can.mp4',
         description:
-            'The tea market is saturated with branding that leans heavily into being “holistic” or “close to nature,” often resulting in similar visuals and muted packaging. Geometea was created to intentionally flip that narrative and stand apart on the shelf. By using unique 2D geometric patterns on each can, Geometea presents an updated, modern interpretation of what a tea brand can be. In a crowded aisle defined by clichés and sameness, Geometea is a provocative outlier that creates a moment of visual disruption and invites curiosity before the first sip.',
+            'lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         tools: ['Adobe Illustrator', 'Adobe Photoshop', 'Blender'],
         images: [
             '/images/can/3 Can Mockup.png',

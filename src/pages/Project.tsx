@@ -1,23 +1,12 @@
 import {useParams, Link} from 'react-router-dom';
-import {useEffect, useRef} from 'react';
 import {projects} from '../data/projects';
 import styles from './Project.module.css';
-import Scroll from '../components/Scroll';
 
 export default function Project() {
     const {id} = useParams<{id: string}>();
     const currentId = parseInt(id || '1');
     const project = projects.find((p) => p.id === currentId);
     const nextProject = projects.find((p) => p.id === currentId + 1);
-    const mockupRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [id]);
-
-    const handleScrollToMockup = () => {
-        mockupRef.current?.scrollIntoView({behavior: 'smooth', block: 'start'});
-    };
 
     if (!project) {
         return (
