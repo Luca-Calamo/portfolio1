@@ -103,7 +103,7 @@
     margin: 0;
 }
 
-.toolImages {
+.images {
     display: flex;
     flex-direction: column;
     gap: 30px;
