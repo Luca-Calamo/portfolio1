@@ -33,7 +33,7 @@ export const projects: Project[] = [
         year: 2024,
         heroImage: '/images/magazine/Front Cover Mockup.png',
         description:
-            'Sustainability in digital design goes beyond just aesthetics. It encompasses choosing efficient color palettes that reduce energy consumption on screens, optimizing image compression without sacrificing quality, and designing with minimal resources in mind. Modern web applications can significantly reduce their carbon footprint through thoughtful design decisions. By considering the environmental impact of every pixel and interaction, designers contribute to a more sustainable digital ecosystem while maintaining beautiful, functional user experiences.',
+            'This project is  designed to present Italy as a cohesive cultural experience rather than a collection of familiar tourist imagery. Italy is often portrayed through its ancient statues and historic structures,  while this magazine showcases its living spirit, vibrant culture, and emotions it brings out. A minimalist design allows the emotions of the subjects to pull the reader in, resonating with their desire for excitement. The cover being one connecting image represents the continuity of their journey, doubling as a striking visual that stands out on shelves. The final message speaks to the reader, inspiring them to step into the adventure and answer the call.',
         tools: ['Adobe InDesign', 'Adobe Photoshop'],
         images: [
             '/images/magazine/Front Cover Mockup.png',
