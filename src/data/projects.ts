@@ -7,6 +7,13 @@ export interface Project {
     description: string;
     tools: string[];
     images: string[];
+    isCaseStudy?: boolean;
+    sections?: Array<{
+        title: string;
+        content: string;
+    }>;
+    challenges?: string;
+    results?: string;
 }
 
 export const projects: Project[] = [
