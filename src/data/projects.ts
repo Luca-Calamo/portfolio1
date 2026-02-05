@@ -118,7 +118,7 @@ export const projects: Project[] = [
     },
     {
         id: 7,
-        title: 'My Case Study Project',
+        title: 'ProLog',
         role: 'UX/UI Design',
         year: 2025,
         heroImage: '/images/project.png',
