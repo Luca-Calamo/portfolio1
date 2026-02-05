@@ -1,6 +1,7 @@
 import {useParams, Link} from 'react-router-dom';
 import {projects} from '../data/projects';
 import styles from './Project.module.css';
+import CaseStudy from './CaseStudy';
 
 export default function Project() {
     const {id} = useParams<{id: string}>();
@@ -15,6 +16,11 @@ export default function Project() {
                 <Link to='/portfolio'>Back to Portfolio</Link>
             </div>
         );
+    }
+
+    // If it's a case study, render the CaseStudy component instead
+    if (project.isCaseStudy) {
+        return <CaseStudy />;
     }
 
     return (

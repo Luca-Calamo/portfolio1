@@ -116,4 +116,31 @@ export const projects: Project[] = [
             'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop',
         ],
     },
+    {
+        id: 7,
+        title: 'My Case Study Project',
+        role: 'UX/UI Design',
+        year: 2025,
+        heroImage: '/images/project.png',
+        description: 'Brief overview...',
+        tools: ['Figma', 'Adobe XD'],
+        images: ['/images/img1.png', '/images/img2.png'],
+        isCaseStudy: true,
+        challenges: 'The main challenge was...',
+        sections: [
+            {
+                title: 'Research',
+                content: 'We conducted user interviews...',
+            },
+            {
+                title: 'Design Process',
+                content: 'Our approach involved...',
+            },
+            {
+                title: 'Iterations',
+                content: 'We refined the design based on...',
+            },
+        ],
+        results: 'The final solution achieved...',
+    },
 ];
