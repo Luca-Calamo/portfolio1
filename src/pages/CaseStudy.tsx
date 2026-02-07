@@ -76,9 +76,9 @@ export default function CaseStudy() {
                 </div>
 
                 {project.images.length > 0 && (
-                    <div className={styles.gallery}>
+                    <div className={styles.imageGalleryContainer}>
                         {project.images.map((img, index) => (
-                            <div key={index} className={styles.galleryItem}>
+                            <div key={index} className={styles.imageGallery}>
                                 <img
                                     src={img}
                                     alt={`${project.title} - Image ${index + 1}`}

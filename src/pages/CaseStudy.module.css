@@ -98,19 +98,19 @@
     margin: 0;
 }
 
-.gallery {
+.imageGalleryContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
 }
 
-.galleryItem {
+.imageGallery {
     overflow: hidden;
     border-radius: 8px;
     background: #f9f9f9;
 }
 
-.galleryItem img {
+.imageGallery img {
     width: 100%;
     height: auto;
     display: block;
@@ -118,7 +118,7 @@
     transition: transform 0.3s ease;
 }
 
-.galleryItem:hover img {
+.imageGallery:hover img {
     transform: scale(1.02);
 }
 

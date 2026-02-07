@@ -67,9 +67,9 @@ export default function Project() {
                     <p className={styles.description}>{project.description}</p>
                 </section>
 
-                <div className={styles.images}>
+                <div className={styles.imageGalleryContainer}>
                     {project.images.map((img, index) => (
-                        <div key={index} className={styles.toolImage}>
+                        <div key={index} className={styles.imageGallery}>
                             <img src={img} alt={`Image ${index + 1}`} />
                         </div>
                     ))}
