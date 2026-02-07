@@ -46,60 +46,51 @@ export default function CaseStudy() {
                 </div>
 
                 <div className={styles.content}>
-                    <section className={styles.section}>
+                    <div className={styles.overview}>
                         <h2 className={styles.sectionTitle}>Overview</h2>
-                        <p>{project.description}</p>
-                    </section>
+                    </div>
 
-                    {project.challenges && (
-                        <section className={styles.section}>
-                            <h2 className={styles.sectionTitle}>Challenges</h2>
-                            <p>{project.challenges}</p>
-                        </section>
-                    )}
+                    <div className={styles.understanding}>
+                        <h2 className={styles.sectionTitle}>
+                            Understanding Apprentice Needs
+                        </h2>
+                    </div>
 
-                    {project.sections?.map((section, idx) => (
-                        <section key={idx} className={styles.section}>
-                            <h2 className={styles.sectionTitle}>
-                                {section.title}
-                            </h2>
-                            <p>{section.content}</p>
-                        </section>
-                    ))}
+                    <div className={styles.solution}>
+                        <h2 className={styles.sectionTitle}>Our solution</h2>
+                    </div>
 
-                    {project.results && (
-                        <section className={styles.section}>
-                            <h2 className={styles.sectionTitle}>Results</h2>
-                            <p>{project.results}</p>
+                    <div className={styles.research}>
+                        <h2 className={styles.sectionTitle}>Research</h2>
+                    </div>
+
+                    <div className={styles.designProcess}>
+                        <h2 className={styles.sectionTitle}>Design Process</h2>
+                    </div>
+
+                    <div className={styles.finalDesign}>
+                        <h2 className={styles.sectionTitle}>Final Design</h2>
+                    </div>
+
+                    <div className={styles.promoMaterial}>
+                        <h2 className={styles.sectionTitle}>
+                            Promotional Material
+                        </h2>
+                    </div>
+
+                    {nextProject && (
+                        <section className={styles.upNext}>
+                            <p>Up Next</p>
+                            <Link
+                                to={`/project/${nextProject.id}`}
+                                className={styles.nextLink}
+                            >
+                                <span>{nextProject.title}</span>
+                                <span className={styles.arrow}>→</span>
+                            </Link>
                         </section>
                     )}
                 </div>
-
-                {project.images.length > 0 && (
-                    <div className={styles.imageGalleryContainer}>
-                        {project.images.map((img, index) => (
-                            <div key={index} className={styles.imageGallery}>
-                                <img
-                                    src={img}
-                                    alt={`${project.title} - Image ${index + 1}`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                )}
-
-                {nextProject && (
-                    <section className={styles.upNext}>
-                        <p>Up Next</p>
-                        <Link
-                            to={`/project/${nextProject.id}`}
-                            className={styles.nextLink}
-                        >
-                            <span>{nextProject.title}</span>
-                            <span className={styles.arrow}>→</span>
-                        </Link>
-                    </section>
-                )}
             </div>
         </article>
     );

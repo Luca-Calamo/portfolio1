@@ -12,13 +12,36 @@ export interface Project {
         title: string;
         content: string;
     }>;
-    challenges?: string;
-    results?: string;
 }
 
 export const projects: Project[] = [
     {
         id: 1,
+        isCaseStudy: true,
+        title: 'ProLog',
+        role: 'UX/UI Design',
+        year: 2025,
+        heroImage: '/images/project.png',
+        description: '',
+        tools: ['Figma', 'Adobe XD'],
+        images: ['/images/img1.png', '/images/img2.png'],
+        sections: [
+            {
+                title: 'Research',
+                content: 'We conducted user interviews...',
+            },
+            {
+                title: 'Design Process',
+                content: 'Our approach involved...',
+            },
+            {
+                title: 'Iterations',
+                content: 'We refined the design based on...',
+            },
+        ],
+    },
+    {
+        id: 2,
         title: 'Geometea',
         role: 'Graphic Design / Marketing',
         year: 2025,
@@ -33,23 +56,9 @@ export const projects: Project[] = [
             '/images/can/Chamomile.png',
         ],
     },
+
     {
-        id: 2,
-        role: 'Design / Layout Design',
-        title: 'G-Adventures Travel Magazine',
-        year: 2024,
-        heroImage: '/images/magazine/Front Cover Mockup.png',
-        description:
-            'This project is  designed to present Italy as a cohesive cultural experience rather than a collection of familiar tourist imagery. Italy is often portrayed through its ancient statues and historic structures,  while this magazine showcases its living spirit, vibrant culture, and emotions it brings out. A minimalist design allows the emotions of the subjects to pull the reader in, resonating with their desire for excitement. The cover being one connecting image represents the continuity of their journey, doubling as a striking visual that stands out on shelves. The final message speaks to the reader, inspiring them to step into the adventure and answer the call.',
-        tools: ['Adobe InDesign', 'Adobe Photoshop'],
-        images: [
-            '/images/magazine/Venice Spread Mockup.png',
-            '/images/magazine/Rome Spread.png',
-            '/images/magazine/Cover Spread.png',
-        ],
-    },
-    {
-        id: 3,
+        id: 4,
         role: 'UX/UI Design',
         title: 'Project 3',
         year: 2024,
@@ -66,7 +75,22 @@ export const projects: Project[] = [
         ],
     },
     {
-        id: 4,
+        id: 3,
+        role: 'Design / Layout Design',
+        title: 'G-Adventures Travel Magazine',
+        year: 2024,
+        heroImage: '/images/magazine/Front Cover Mockup.png',
+        description:
+            'This project is  designed to present Italy as a cohesive cultural experience rather than a collection of familiar tourist imagery. Italy is often portrayed through its ancient statues and historic structures,  while this magazine showcases its living spirit, vibrant culture, and emotions it brings out. A minimalist design allows the emotions of the subjects to pull the reader in, resonating with their desire for excitement. The cover being one connecting image represents the continuity of their journey, doubling as a striking visual that stands out on shelves. The final message speaks to the reader, inspiring them to step into the adventure and answer the call.',
+        tools: ['Adobe InDesign', 'Adobe Photoshop'],
+        images: [
+            '/images/magazine/Venice Spread Mockup.png',
+            '/images/magazine/Rome Spread.png',
+            '/images/magazine/Cover Spread.png',
+        ],
+    },
+    {
+        id: 5,
         role: 'Typography Design',
         title: 'Project 4',
         year: 2024,
@@ -83,7 +107,7 @@ export const projects: Project[] = [
         ],
     },
     {
-        id: 5,
+        id: 6,
         role: 'Design Research',
         title: 'Project 5',
         year: 2024,
@@ -101,7 +125,7 @@ export const projects: Project[] = [
     },
     {
         role: 'Motion Design',
-        id: 6,
+        id: 7,
         title: 'Project 6',
         year: 2024,
         heroImage:
@@ -115,32 +139,5 @@ export const projects: Project[] = [
             'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop',
             'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop',
         ],
-    },
-    {
-        id: 7,
-        title: 'ProLog',
-        role: 'UX/UI Design',
-        year: 2025,
-        heroImage: '/images/project.png',
-        description: 'Brief overview...',
-        tools: ['Figma', 'Adobe XD'],
-        images: ['/images/img1.png', '/images/img2.png'],
-        isCaseStudy: true,
-        challenges: 'The main challenge was...',
-        sections: [
-            {
-                title: 'Research',
-                content: 'We conducted user interviews...',
-            },
-            {
-                title: 'Design Process',
-                content: 'Our approach involved...',
-            },
-            {
-                title: 'Iterations',
-                content: 'We refined the design based on...',
-            },
-        ],
-        results: 'The final solution achieved...',
     },
 ];
