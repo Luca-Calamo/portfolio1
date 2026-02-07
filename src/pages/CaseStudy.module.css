@@ -72,12 +72,38 @@
     box-sizing: border-box;
 }
 
+/* --------------------------------------------- Grid -------------------------------------------  */
+
+.gridOneOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.gridOneThree {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+.gridThreeOne {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
 /* ------------------------------------------- Main Content -------------------------------------------  */
 
 .content {
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .sectionTitle {
@@ -88,7 +114,12 @@
     text-transform: uppercase;
 }
 
-.numbering {
+.sectionParagraph {
+    font-size: 1rem;
+    color: #333;
+}
+
+.mainNumber {
     font-size: 1rem;
     color: #000000;
     font-weight: 600;
@@ -98,22 +129,6 @@
 }
 
 /* -------------------------------------------- SECTIONS --------------------------------------------  */
-.overview {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
-.overviewParagraph {
-    font-size: 1.1rem;
-
-    color: #333;
-}
-.overviewContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
 
 .overviewImages {
     display: flex;
