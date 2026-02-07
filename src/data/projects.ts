@@ -21,24 +21,11 @@ export const projects: Project[] = [
         title: 'ProLog',
         role: 'UX/UI Design',
         year: 2025,
-        heroImage: '/images/project.png',
+        heroImage: '/videos/Can.mp4',
         description: '',
-        tools: ['Figma', 'Adobe XD'],
+        tools: ['Figma', 'Trello', 'Adobe Illustrator'],
         images: ['/images/img1.png', '/images/img2.png'],
-        sections: [
-            {
-                title: 'Research',
-                content: 'We conducted user interviews...',
-            },
-            {
-                title: 'Design Process',
-                content: 'Our approach involved...',
-            },
-            {
-                title: 'Iterations',
-                content: 'We refined the design based on...',
-            },
-        ],
+        sections: [],
     },
     {
         id: 2,

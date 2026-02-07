@@ -75,39 +75,6 @@ export default function Project() {
                     ))}
                 </div>
 
-                {project.isCaseStudy && (
-                    <>
-                        {project.challenges && (
-                            <section className={styles.section}>
-                                <h2 className={styles.sectionTitle}>
-                                    Challenges
-                                </h2>
-                                <p className={styles.description}>
-                                    {project.challenges}
-                                </p>
-                            </section>
-                        )}
-                        {project.sections?.map((section, idx) => (
-                            <section key={idx} className={styles.section}>
-                                <h2 className={styles.sectionTitle}>
-                                    {section.title}
-                                </h2>
-                                <p className={styles.description}>
-                                    {section.content}
-                                </p>
-                            </section>
-                        ))}
-                        {project.results && (
-                            <section className={styles.section}>
-                                <h2 className={styles.sectionTitle}>Results</h2>
-                                <p className={styles.description}>
-                                    {project.results}
-                                </p>
-                            </section>
-                        )}
-                    </>
-                )}
-
                 {nextProject && (
                     <section className={styles.upNext}>
                         <h2 className={styles.sectionTitle}>Up Next</h2>

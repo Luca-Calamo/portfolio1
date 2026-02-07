@@ -72,6 +72,8 @@
     box-sizing: border-box;
 }
 
+/* ------------------------------------------- Main Content -------------------------------------------  */
+
 .content {
     display: flex;
     flex-direction: column;
@@ -82,7 +84,48 @@
     font-size: 1.5rem;
     color: #1a1a1a;
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 0.3rem;
+    text-transform: uppercase;
+}
+
+.numbering {
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* -------------------------------------------- SECTIONS --------------------------------------------  */
+.overview {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.overviewParagraph {
+    font-size: 1.1rem;
+
+    color: #333;
+}
+.overviewContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.overviewImages {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.overviewImage {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
 }
 
 .upNext {
