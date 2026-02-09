@@ -80,6 +80,12 @@
     gap: 20px;
 }
 
+.gridThree {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 .gridOneThree {
     display: grid;
     grid-template-columns: 1fr 3fr;

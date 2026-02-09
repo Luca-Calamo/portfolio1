@@ -1,6 +1,7 @@
 import {useParams, Link} from 'react-router-dom';
 import {projects} from '../data/projects';
 import styles from './CaseStudy.module.css';
+import TextCards from '../components/TextCards/TextCards';
 
 export default function CaseStudy() {
     const {id} = useParams<{id: string}>();
@@ -111,7 +112,14 @@ export default function CaseStudy() {
 
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>03</h3>
-                        <h2 className={styles.sectionTitle}>Our solution</h2>
+                        <div className={styles.gridThree}>
+                            <h2 className={styles.sectionTitle}>
+                                Our solution
+                            </h2>
+                            <TextCards />
+                            <TextCards />
+                            <TextCards />
+                        </div>
                     </div>
 
                     <div className={styles.section}>
