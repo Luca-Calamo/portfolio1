@@ -1,7 +1,7 @@
 import {useParams, Link} from 'react-router-dom';
 import {projects} from '../data/projects';
 import styles from './CaseStudy.module.css';
-import TextCards from '../components/TextCards/TextCards';
+// import TextCards from '../components/TextCards/TextCards';
 
 export default function CaseStudy() {
     const {id} = useParams<{id: string}>();
@@ -57,7 +57,7 @@ export default function CaseStudy() {
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>01</h3>
                         <div className={styles.gridOneThree}>
-                            <div className={styles.overviewText}>
+                            <div className={styles.containerText}>
                                 <h2 className={styles.sectionTitle}>
                                     Overview
                                 </h2>
@@ -85,9 +85,9 @@ export default function CaseStudy() {
                     </div>
 
                     <div className={styles.section}>
-                        <h3 className={styles.mainNumber}>02</h3>
                         <div className={styles.gridOneThree}>
-                            <div className={styles.overviewText}>
+                            <div className={styles.containerText}>
+                                <h3 className={styles.mainNumber}>02</h3>
                                 <h2 className={styles.sectionTitle}>
                                     Understanding Apprentice Needs
                                 </h2>
@@ -112,19 +112,86 @@ export default function CaseStudy() {
 
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>03</h3>
+                        <h2 className={styles.sectionTitle}>Our solution</h2>
                         <div className={styles.gridThree}>
-                            <h2 className={styles.sectionTitle}>
-                                Our solution
-                            </h2>
-                            <TextCards />
-                            <TextCards />
-                            <TextCards />
+                            <div className={styles.card}>
+                                <h4 className={styles.cardTitle}>Card Title</h4>
+                                <p className={styles.cardText}>
+                                    This is a description of the card content.
+                                    It provides more details about the solution.
+                                </p>
+                            </div>
+                            <div className={styles.card}>
+                                <h4 className={styles.cardTitle}>Card Title</h4>
+                                <p className={styles.cardText}>
+                                    This is a description of the card content.
+                                    It provides more details about the solution.
+                                </p>
+                            </div>
+                            <div className={styles.card}>
+                                <h4 className={styles.cardTitle}>Card Title</h4>
+                                <p className={styles.cardText}>
+                                    This is a description of the card content.
+                                    It provides more details about the solution.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>04</h3>
                         <h2 className={styles.sectionTitle}>Research</h2>
+                        <div className={styles.subNumber}>4.1</div>
+                        <div className={styles.subHeading}>
+                            Understanding the Problem
+                        </div>
+                        <div className={styles.researchContainer}>
+                            <div className={styles.gridThree}>
+                                <div className={styles.cardShadow}>
+                                    <h4 className={styles.cardTitle}>
+                                        Card Title
+                                    </h4>
+                                    <p className={styles.cardText}>
+                                        This is a description of the card
+                                        content. It provides more details about
+                                        the solution.
+                                    </p>
+                                </div>
+                                <div className={styles.cardShadow}>
+                                    <h4 className={styles.cardTitle}>
+                                        Card Title
+                                    </h4>
+                                    <p className={styles.cardText}>
+                                        This is a description of the card
+                                        content. It provides more details about
+                                        the solution.
+                                    </p>
+                                </div>
+                                <div className={styles.cardShadow}>
+                                    <h4 className={styles.cardTitle}>
+                                        Card Title
+                                    </h4>
+                                    <p className={styles.cardText}>
+                                        This is a description of the card
+                                        content. It provides more details about
+                                        the solution.
+                                    </p>
+                                </div>
+                                <p className={styles.underText}>
+                                    lorum ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Donec vel sapien eget nunc
+                                    efficitur efficitur. Sed at ligula a enim
+                                    efficitur commodo. Curabitur ac odio id nisl
+                                    convallis tincidunt. Nulla facilisi. In hac
+                                    habitasse platea dictumst. Proin ut dui sed
+                                    metus fermentum bibendum.
+                                </p>
+                            </div>
+                        </div>
+                        <div className={styles.subNumber}>4.2</div>
+                        <div className={styles.subHeading}>
+                            Competative Analysis / User Research
+                        </div>
                     </div>
 
                     <div className={styles.section}>
