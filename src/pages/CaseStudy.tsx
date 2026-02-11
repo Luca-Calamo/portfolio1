@@ -54,98 +54,63 @@ export default function CaseStudy() {
                 {/* ------------------------------------------- Main Content ------------------------------------------- */}
 
                 <div className={styles.content}>
-                    <div className={styles.section}>
-                        <h3 className={styles.mainNumber}>01</h3>
-                        <div className={styles.gridOneThree}>
-                            <div className={styles.containerText}>
-                                <h2 className={styles.sectionTitle}>
-                                    Overview
-                                </h2>
-                                <p className={styles.sectionParagraph}>
-                                    lorum ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Donec vel sapien eget nunc
-                                    efficitur efficitur. Sed at ligula a enim
-                                    efficitur commodo. Curabitur ac odio id nisl
-                                    convallis tincidunt. Nulla facilisi. In hac
-                                    habitasse platea dictumst. Proin ut dui sed
-                                    metus fermentum bibendum.
-                                </p>
-                            </div>
-                            <div className={styles.overviewImages}>
+                    <div className={styles.group}>
+                        <div className={styles.section}>
+                            <h3 className={styles.mainNumber}>01</h3>
+                            <div className={styles.gridOneThree}>
+                                <div className={styles.containerText}>
+                                    <h2 className={styles.sectionTitle}>
+                                        Overview
+                                    </h2>
+                                    <p className={styles.sectionParagraph}>
+                                        lorum ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Donec vel sapien eget
+                                        nunc efficitur efficitur. Sed at ligula
+                                        a enim efficitur commodo. Curabitur ac
+                                        odio id nisl convallis tincidunt. Nulla
+                                        facilisi. In hac habitasse platea
+                                        dictumst. Proin ut dui sed metus
+                                        fermentum bibendum.
+                                    </p>
+                                </div>
+
                                 <img
-                                    className={styles.overviewImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
-                                <img
-                                    className={styles.overviewImage}
+                                    className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
                                 />
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.section}>
-                        <div className={styles.gridOneThree}>
-                            <div className={styles.containerText}>
-                                <h3 className={styles.mainNumber}>02</h3>
-                                <h2 className={styles.sectionTitle}>
-                                    Understanding Apprentice Needs
-                                </h2>
-                                <p className={styles.sectionParagraph}>
-                                    lorum ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Donec vel sapien eget nunc
-                                    efficitur efficitur. Sed at ligula a enim
-                                </p>
-                            </div>
-                            <div className={styles.overviewImages}>
+                    <div className={styles.group}>
+                        <div className={styles.section}>
+                            <div className={styles.gridOneThree}>
+                                <div className={styles.containerText}>
+                                    <h3 className={styles.mainNumber}>02</h3>
+                                    <h2 className={styles.sectionTitle}>
+                                        Understanding Apprentice Needs
+                                    </h2>
+                                    <p className={styles.sectionParagraph}>
+                                        lorum ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Donec vel sapien eget
+                                        nunc efficitur efficitur. Sed at ligula
+                                        a enim
+                                    </p>
+                                </div>
                                 <img
-                                    className={styles.overviewImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
-                                <img
-                                    className={styles.overviewImage}
+                                    className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
                                 />
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.section}>
-                        <h3 className={styles.mainNumber}>03</h3>
-                        <h2 className={styles.sectionTitle}>Our solution</h2>
-                        <div className={styles.gridThree}>
-                            <div className={styles.card}>
-                                <h4 className={styles.cardTitle}>Card Title</h4>
-                                <p className={styles.cardText}>
-                                    This is a description of the card content.
-                                    It provides more details about the solution.
-                                </p>
-                            </div>
-                            <div className={styles.card}>
-                                <h4 className={styles.cardTitle}>Card Title</h4>
-                                <p className={styles.cardText}>
-                                    This is a description of the card content.
-                                    It provides more details about the solution.
-                                </p>
-                            </div>
-                            <div className={styles.card}>
-                                <h4 className={styles.cardTitle}>Card Title</h4>
-                                <p className={styles.cardText}>
-                                    This is a description of the card content.
-                                    It provides more details about the solution.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.section}>
-                        <h3 className={styles.mainNumber}>04</h3>
-                        <h2 className={styles.sectionTitle}>Research</h2>
-                        <div className={styles.subNumber}>4.1</div>
-                        <div className={styles.subHeading}>
-                            Understanding the Problem
-                        </div>
-                        <div className={styles.researchContainer}>
+                    <div className={styles.group}>
+                        <div className={styles.section}>
+                            <h3 className={styles.mainNumber}>03</h3>
+                            <h2 className={styles.sectionTitle}>
+                                Our solution
+                            </h2>
                             <div className={styles.gridThree}>
                                 <div className={styles.cardShadow}>
                                     <h4 className={styles.cardTitle}>
@@ -177,31 +142,234 @@ export default function CaseStudy() {
                                         the solution.
                                     </p>
                                 </div>
-                                <p className={styles.underText}>
-                                    lorum ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Donec vel sapien eget nunc
-                                    efficitur efficitur. Sed at ligula a enim
-                                    efficitur commodo. Curabitur ac odio id nisl
-                                    convallis tincidunt. Nulla facilisi. In hac
-                                    habitasse platea dictumst. Proin ut dui sed
-                                    metus fermentum bibendum.
-                                </p>
                             </div>
                         </div>
-                        <div className={styles.subNumber}>4.2</div>
-                        <div className={styles.subHeading}>
-                            Competative Analysis / User Research
+                    </div>
+
+                    <div className={styles.section}>
+                        <div className={styles.group}>
+                            <h3 className={styles.mainNumber}>04</h3>
+                            <h2 className={styles.sectionTitle}>Research</h2>
+                            <div className={styles.subNumber}>4.1</div>
+                            <div className={styles.subHeading}>
+                                Understanding the Problem
+                            </div>
+                            <div className={styles.secContentContainer}>
+                                <div className={styles.gridTwo}>
+                                    <div className={styles.cardShadow}>
+                                        <h4 className={styles.cardTitle}>
+                                            Card Title
+                                        </h4>
+                                        <p className={styles.cardText}>
+                                            This is a description of the card
+                                            content. It provides more details
+                                            about the solution.
+                                        </p>
+                                    </div>
+                                    <div className={styles.cardShadow}>
+                                        <h4 className={styles.cardTitle}>
+                                            Card Title
+                                        </h4>
+                                        <p className={styles.cardText}>
+                                            This is a description of the card
+                                            content. It provides more details
+                                            about the solution.
+                                        </p>
+                                    </div>
+                                    <p className={styles.underText}>
+                                        lorum ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Donec vel sapien eget
+                                        nunc efficitur efficitur. Sed at ligula
+                                        a enim efficitur commodo. Curabitur ac
+                                        odio id nisl convallis tincidunt. Nulla
+                                        facilisi. In hac habitasse platea
+                                        dictumst. Proin ut dui sed metus
+                                        fermentum bibendum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={styles.group}>
+                            <div className={styles.subNumber}>4.2</div>
+                            <div className={styles.subHeading}>
+                                Competative Analysis
+                            </div>
+                            <p className={styles.sectionParagraph}>
+                                lorum ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec vel sapien eget nunc
+                                efficitur efficitur. Sed at ligula a enim
+                                efficitur commodo. Curabitur ac odio id nisl
+                                convallis tincidunt. Nulla facilisi. In hac
+                                habitasse platea dictumst. Proin ut dui sed
+                                metus fermentum bibendum.
+                            </p>
+                            <img
+                                className={styles.bigImage}
+                                src={'/images/Under_Construction.jpeg'}
+                            />
+                        </div>
+
+                        <div className={styles.group}>
+                            <div className={styles.subNumber}>4.3</div>
+                            <div className={styles.subHeading}>
+                                User Personas
+                            </div>
+                            <p className={styles.sectionParagraph}>
+                                lorum ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec vel sapien eget nunc
+                                efficitur efficitur. Sed at ligula a enim
+                                efficitur commodo. Curabitur ac odio id nisl
+                                convallis tincidunt. Nulla facilisi. In hac
+                                habitasse platea dictumst. Proin ut dui sed
+                                metus fermentum bibendum.
+                            </p>
+                            <img
+                                className={styles.bigImage}
+                                src={'/images/Under_Construction.jpeg'}
+                            />
                         </div>
                     </div>
 
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>05</h3>
-                        <h2 className={styles.sectionTitle}>Design Process</h2>
+                        <div className={styles.group}>
+                            <h2 className={styles.sectionTitle}>
+                                Design Process
+                            </h2>
+                            <div className={styles.subNumber}>5.1</div>
+                            <div className={styles.subHeading}>User Flow</div>
+                            <div className={styles.sectionParagraph}>
+                                lorum ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec vel sapien eget nunc
+                                efficitur efficitur. Sed at ligula a enim
+                                efficitur commodo. Curabitur ac odio id nisl
+                                convallis tincidunt. Nulla facilisi. In hac
+                                habitasse platea dictumst. Proin ut dui sed
+                                metus fermentum bibendum.
+                            </div>
+                            <div className={styles.secContentContainer}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styles.group}>
+                            <div className={styles.subNumber}>5.2</div>
+                            <div className={styles.subHeading}>Style Guide</div>
+                            <div className={styles.sectionParagraph}>
+                                lorum ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec vel sapien eget nunc
+                                efficitur efficitur. Sed at ligula a enim
+                                efficitur commodo. Curabitur ac odio id nisl
+                                convallis tincidunt. Nulla facilisi. In hac
+                                habitasse platea dictumst. Proin ut dui sed
+                                metus fermentum bibendum.
+                            </div>
+                            <div className={styles.secContentContainer}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styles.group}>
+                            <div className={styles.subNumber}>5.3</div>
+                            <div className={styles.subHeading}>
+                                Site Map Over Time
+                            </div>
+                            <div className={styles.sectionParagraph}>
+                                lorum ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec vel sapien eget nunc
+                                efficitur efficitur. Sed at ligula a enim
+                                efficitur commodo. Curabitur ac odio id nisl
+                                convallis tincidunt. Nulla facilisi. In hac
+                                habitasse platea dictumst. Proin ut dui sed
+                                metus fermentum bibendum.
+                            </div>
+                            <div className={styles.gridTwoTwo}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styles.group}>
+                            <div className={styles.subNumber}>5.4</div>
+                            <div className={styles.subHeading}>
+                                Lo-Fi Wireframes
+                            </div>
+                            <div className={styles.sectionParagraph}>
+                                lorum ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec vel sapien eget nunc
+                                efficitur efficitur. Sed at ligula a enim
+                                efficitur commodo. Curabitur ac odio id nisl
+                                convallis tincidunt. Nulla facilisi. In hac
+                                habitasse platea dictumst. Proin ut dui sed
+                                metus fermentum bibendum.
+                            </div>
+                            <div className={styles.gridTwo}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                            </div>
+                        </div>
                     </div>
 
-                    <div className={styles.section}>
-                        <h3 className={styles.mainNumber}>06</h3>
-                        <h2 className={styles.sectionTitle}>Final Design</h2>
+                    <div className={styles.group}>
+                        <div className={styles.section}>
+                            <h3 className={styles.mainNumber}>06</h3>
+                            <h2 className={styles.sectionTitle}>
+                                Final Design
+                            </h2>
+                            <div className={styles.gridOne}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/Under_Construction.jpeg'}
+                                />
+                            </div>
+                        </div>
                     </div>
 
                     <div className={styles.section}>
