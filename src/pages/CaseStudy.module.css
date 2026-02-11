@@ -18,6 +18,39 @@
     flex-direction: column;
     gap: 40px;
     margin-bottom: 60px;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.linkItem {
+    font-size: 1.5rem;
+}
+
+/* .linkItem {
+    display: inline-block;
+    padding: clamp(6px, 0.8vh, 8px) clamp(14px, 2vh, 16px);
+    background-color: #71068b;
+    color: rgb(255, 254, 247);
+    border: 2px solid #71068b;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+} */
+
+.mainImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
 }
 
 .title {
@@ -138,8 +171,9 @@
 }
 
 .sectionParagraph {
-    font-size: 1rem;
-    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #000000;
 }
 
 .mainNumber {

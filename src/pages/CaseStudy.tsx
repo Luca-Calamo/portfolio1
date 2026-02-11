@@ -45,6 +45,21 @@ export default function CaseStudy() {
                         </div>
                     </div>
 
+                    <div className={styles.links}>
+                        <a href='#' className={styles.linkItem}>
+                            Figma
+                        </a>
+                        <a href='#' className={styles.linkItem}>
+                            Github
+                        </a>
+                        <a href='#' className={styles.linkItem}>
+                            Promotional Video
+                        </a>
+                        <a href='#' className={styles.linkItem}>
+                            Instagram
+                        </a>
+                    </div>
+
                     <img
                         className={styles.mainImage}
                         src={'/images/Under_Construction.jpeg'}
