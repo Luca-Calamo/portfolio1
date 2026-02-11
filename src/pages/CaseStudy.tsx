@@ -193,7 +193,7 @@ export default function CaseStudy() {
                         <div className={styles.group}>
                             <div className={styles.subNumber}>4.2</div>
                             <div className={styles.subHeading}>
-                                Competative Analysis
+                                Competitive Analysis
                             </div>
                             <p className={styles.sectionParagraph}>
                                 lorum ipsum dolor sit amet, consectetur
