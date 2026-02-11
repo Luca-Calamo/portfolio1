@@ -63,14 +63,17 @@ export default function CaseStudy() {
                                         Overview
                                     </h2>
                                     <p className={styles.sectionParagraph}>
-                                        lorum ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Donec vel sapien eget
-                                        nunc efficitur efficitur. Sed at ligula
-                                        a enim efficitur commodo. Curabitur ac
-                                        odio id nisl convallis tincidunt. Nulla
-                                        facilisi. In hac habitasse platea
-                                        dictumst. Proin ut dui sed metus
-                                        fermentum bibendum.
+                                        ProLog is an AI-powered app that levels
+                                        the playing field for neurodiverse
+                                        apprentices in trades. It removes
+                                        barriers by simplifying the complex
+                                        apprenticeship journey and centralizing
+                                        the overwhelming amount of information
+                                        apprentices need to manage. ProLog
+                                        tracks past progress and visualizes the
+                                        future, helping apprentices understand
+                                        where they are in their career progress
+                                        and what steps come next.
                                     </p>
                                 </div>
 
