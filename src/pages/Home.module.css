@@ -103,7 +103,7 @@ video.image {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    background: linear-gradient(to top, #71068b, transparent);
     padding: 20px;
     display: flex;
     align-items: flex-end;
