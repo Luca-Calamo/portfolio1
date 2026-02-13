@@ -109,10 +109,21 @@ export default function CaseStudy() {
                                         Understanding Apprentice Needs
                                     </h2>
                                     <p className={styles.sectionParagraph}>
-                                        lorum ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Donec vel sapien eget
-                                        nunc efficitur efficitur. Sed at ligula
-                                        a enim
+                                        Apprenticeship takes over 6,000 hours.
+                                        That's years bouncing between job sites,
+                                        classrooms, and paperwork; never quite
+                                        sure if you're actually making progress.
+                                        The more we talked to apprentices, the
+                                        clearer it became: people weren't
+                                        quitting because the work was too hard.
+                                        They were quitting because they felt
+                                        lost. "How many hours do I actually
+                                        have?" "What do I still need to learn?"
+                                        "Am I even on track?" Nobody could give
+                                        them straight answers. We realized we
+                                        needed to build something that could
+                                        answer one simple question: Where am I
+                                        in my journey?
                                     </p>
                                 </div>
                                 <img
@@ -131,34 +142,46 @@ export default function CaseStudy() {
                             </h2>
                             <div className={styles.gridThree}>
                                 <div className={styles.cardShadow}>
-                                    <h4 className={styles.cardTitle}>
-                                        Card Title
-                                    </h4>
-                                    <p className={styles.cardText}>
-                                        This is a description of the card
-                                        content. It provides more details about
-                                        the solution.
-                                    </p>
+                                    <div className={styles.cardContent}>
+                                        <h4 className={styles.cardTitle}>
+                                            Journey Visualization
+                                        </h4>
+                                        <p className={styles.cardText}>
+                                            ProLog's dashboard uses a visual
+                                            roadmap to show apprentices exactly
+                                            where they are in their long
+                                            journey, turning abstract progress
+                                            into tangible milestones they can
+                                            see and feel confident about.
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className={styles.cardShadow}>
-                                    <h4 className={styles.cardTitle}>
-                                        Card Title
-                                    </h4>
-                                    <p className={styles.cardText}>
-                                        This is a description of the card
-                                        content. It provides more details about
-                                        the solution.
-                                    </p>
+                                    <div className={styles.cardContent}>
+                                        <h4 className={styles.cardTitle}>
+                                            Centralized Information
+                                        </h4>
+                                        <p className={styles.cardText}>
+                                            ProLog organizes scattered resource
+                                            into one intuitive app, transforming
+                                            a fragmented system into something
+                                            actually usable.
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className={styles.cardShadow}>
-                                    <h4 className={styles.cardTitle}>
-                                        Card Title
-                                    </h4>
-                                    <p className={styles.cardText}>
-                                        This is a description of the card
-                                        content. It provides more details about
-                                        the solution.
-                                    </p>
+                                    <div className={styles.cardContent}>
+                                        <h4 className={styles.cardTitle}>
+                                            Removes Barriers
+                                        </h4>
+                                        <p className={styles.cardText}>
+                                            ProLog cuts through the confusion by
+                                            surfacing the right information at
+                                            the right time, so apprentices can
+                                            focus on learning their trade
+                                            instead of navigating bureaucracy.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

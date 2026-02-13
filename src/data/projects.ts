@@ -30,6 +30,8 @@ export const projects: Project[] = [
             'Adobe Photoshop',
             'Adobe Premiere Pro',
             'Microsoft Excel',
+            'React Expo',
+            'Javascript',
         ],
         images: ['/images/img1.png', '/images/img2.png'],
         sections: [],
