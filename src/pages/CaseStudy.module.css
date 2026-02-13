@@ -172,7 +172,7 @@
 
 .sectionParagraph {
     font-size: 1.1rem;
-    line-height: 1.5;
+    line-height: 1.8;
     color: #000000;
 }
 
@@ -212,12 +212,18 @@
     flex-direction: column;
     justify-content: center; */
     gap: 30px;
-    background-color: rgb(196, 196, 238);
+    background-color: rgb(241, 221, 250);
     height: 400px;
     width: 100%;
     padding: 3rem;
     /* border-radius: 0.5rem; */
     box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cardTitle {
@@ -255,6 +261,9 @@
 
 .underText {
     grid-column: span 3;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
 }
 
 .upNext {
