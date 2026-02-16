@@ -124,6 +124,12 @@
     gap: 20px;
 }
 
+.gridFour {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
 .gridFive {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -171,8 +177,8 @@
 }
 
 .sectionParagraph {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.5;
     color: #000000;
 }
 
@@ -187,16 +193,16 @@
 
 .subHeading {
     font-size: 1.2rem;
-    color: #000000;
+    color: #71068b;
     font-weight: 500;
     margin: 8px 0;
 }
 
 .subNumber {
     font-size: 1.3rem;
-    color: #000000;
+    color: #71068b;
     font-weight: 100;
-    margin: 8px 0 8px 0;
+    margin: 15px 0 8px 0;
 }
 
 .card {
@@ -264,6 +270,13 @@
     font-size: 1.1rem;
     line-height: 1.8;
     color: #000000;
+}
+
+.figmaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .upNext {
