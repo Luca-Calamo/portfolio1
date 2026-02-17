@@ -171,7 +171,7 @@
 .sectionTitle {
     font-size: 1.5rem;
     color: #71068b;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0 0 0.3rem;
     text-transform: uppercase;
 }
@@ -185,16 +185,15 @@
 .mainNumber {
     font-size: 1.3rem;
     color: #71068b;
-    font-weight: 100;
     margin-bottom: 8px;
-    text-transform: uppercase;
+    font-weight: 800;
     letter-spacing: 1.5px;
 }
 
 .subHeading {
     font-size: 1.2rem;
     color: #71068b;
-    font-weight: 500;
+    font-weight: 600;
     margin: 8px 0;
 }
 
@@ -214,34 +213,39 @@
 }
 
 .cardShadow {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     gap: 30px;
     background-color: rgb(241, 221, 250);
-    height: 400px;
+    min-height: 400px;
     width: 100%;
-    padding: 3rem;
-    /* border-radius: 0.5rem; */
+    padding: clamp(1.5rem, 4vw, 3rem);
     box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .cardContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .cardTitle {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     color: #000000;
-    margin-bottom: 30px;
+    margin-bottom: clamp(1rem, 3vw, 30px);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .cardText {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: #000000;
-    line-height: 2rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .bigImage {
@@ -338,6 +342,7 @@
 @media (max-width: 768px) {
     .container {
         gap: 40px;
+        width: 85%;
     }
 
     .title {
@@ -355,5 +360,19 @@
 
     .gallery {
         grid-template-columns: 1fr;
+    }
+
+    .gridTwo,
+    .gridThree,
+    .gridFour,
+    .gridFive,
+    .gridOneThree,
+    .gridThreeOne,
+    .gridTwoTwo {
+        grid-template-columns: 1fr;
+    }
+
+    .cardShadow {
+        min-height: 300px;
     }
 }

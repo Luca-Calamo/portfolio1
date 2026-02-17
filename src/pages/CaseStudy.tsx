@@ -346,7 +346,7 @@ export default function CaseStudy() {
                                 Site Map Over Time
                             </div>
                             <div className={styles.sectionParagraph}>
-                                ur initial architecture included a "Resources"
+                                Our initial architecture included a "Resources"
                                 page combining school info and financial
                                 databases. User testing revealed this violated
                                 our value proposition. We restructured around
