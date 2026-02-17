@@ -62,7 +62,7 @@ export default function CaseStudy() {
 
                     <img
                         className={styles.mainImage}
-                        src={'/images/Under_Construction.jpeg'}
+                        src={'/images/prolog/Dashboard_Mockup.png'}
                     />
                 </div>
 
@@ -94,7 +94,7 @@ export default function CaseStudy() {
 
                                 <img
                                     className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
+                                    src={'/images/prolog/Dashboard_Mockup.png'}
                                 />
                             </div>
                         </div>
