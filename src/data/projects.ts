@@ -19,9 +19,9 @@ export const projects: Project[] = [
         id: 1,
         isCaseStudy: true,
         title: 'ProLog',
-        role: 'UX/UI Design',
+        role: 'Project Manager',
         year: 2025,
-        heroImage: '/images/Under_Construction.jpeg',
+        heroImage: '/images/prolog/Dashboard_Mockup.png',
         description: '',
         tools: [
             'Figma',
@@ -109,22 +109,6 @@ export const projects: Project[] = [
         description:
             "User research and data-driven design decisions separate great designs from mediocre ones. By conducting user interviews, usability testing, and analyzing behavioral data, designers gain insight into real user needs and pain points. This information informs every design decision from information architecture to microinteractions. When design is rooted in user understanding rather than assumptions, the result is a product that resonates with its audience and solves actual problems. Data-driven design is not about removing creativity—it's about directing creativity toward meaningful solutions.",
         tools: ['Hotjar', 'Maze', 'Google Analytics'],
-        images: [
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-        ],
-    },
-    {
-        role: 'Motion Design',
-        id: 7,
-        title: 'Project 6',
-        year: 2024,
-        heroImage: '/images/Under_Construction.jpeg',
-        description:
-            "Motion design breathes life into static interfaces. Thoughtful animations and transitions guide user attention, provide feedback, and create delight. However, motion should serve a purpose—every animation should enhance usability or communication rather than distract. Microinteractions, from button hover states to loading animations, build trust and engagement. When motion design is subtle and purposeful, users don't consciously notice it, yet they feel the difference in how natural and responsive the interface feels.",
-        tools: ['Framer Motion', 'Cinema 4D', 'After Effects'],
         images: [
             '/images/Under_Construction.jpeg',
             '/images/Under_Construction.jpeg',

@@ -1,6 +1,7 @@
 import {useParams, Link} from 'react-router-dom';
 import {projects} from '../data/projects';
 import styles from './CaseStudy.module.css';
+import CompetitiveAnalysis from '../components/CompetitiveAnalysis/CompetitiveAnalysis';
 // import TextCards from '../components/TextCards/TextCards';
 
 export default function CaseStudy() {
@@ -60,10 +61,10 @@ export default function CaseStudy() {
                         </a>
                     </div>
 
-                    <img
+                    {/* <img
                         className={styles.mainImage}
                         src={'/images/prolog/Dashboard_Mockup.png'}
-                    />
+                    /> */}
                 </div>
 
                 {/* ------------------------------------------- Main Content ------------------------------------------- */}
@@ -80,15 +81,16 @@ export default function CaseStudy() {
                                     <p className={styles.sectionParagraph}>
                                         ProLog is an AI-powered app that levels
                                         the playing field for neurodiverse
-                                        apprentices in trades. It removes
-                                        barriers by simplifying the complex
-                                        apprenticeship journey and centralizing
-                                        the overwhelming amount of information
-                                        apprentices need to manage. ProLog
-                                        tracks past progress and visualizes the
-                                        future, helping apprentices understand
-                                        where they are in their career progress
-                                        and what steps come next.
+                                        apprentices in the skilled trades. It
+                                        removes barriers by simplifying the
+                                        complex apprenticeship journey and
+                                        centralizing the overwhelming amount of
+                                        information apprentices need to manage.
+                                        ProLog tracks past progress and
+                                        visualizes the future, helping
+                                        apprentices understand where they are in
+                                        their career progress and what steps
+                                        come next.
                                     </p>
                                 </div>
 
@@ -248,10 +250,11 @@ export default function CaseStudy() {
                                 discrepancy detection that would be impossible
                                 in broader platforms.
                             </p>
-                            <img
-                                className={styles.bigImage}
-                                src={'/images/Under_Construction.jpeg'}
-                            />
+                            <div
+                                className={styles.competitiveAnalysisContainer}
+                            >
+                                <CompetitiveAnalysis />
+                            </div>
                         </div>
 
                         <div className={styles.group}>
