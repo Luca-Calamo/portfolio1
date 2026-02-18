@@ -111,7 +111,11 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Dashboard_Mockup.png'}
-                                    onClick={() => setSelectedImage('/images/prolog/Dashboard_Mockup.png')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/prolog/Dashboard_Mockup.png',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                             </div>
@@ -146,8 +150,14 @@ export default function CaseStudy() {
                                 </div>
                                 <img
                                     className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
-                                    style={{cursor: 'pointer'}}                                />
+                                    src={'/images/Under_Construction.jpeg'}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
+                                    style={{cursor: 'pointer'}}
+                                />
                             </div>
                         </div>
                     </div>
@@ -247,7 +257,11 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Primary_User_Grey.png'}
-                                    onClick={() => setSelectedImage('/images/prolog/Primary_User_Grey.png')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/prolog/Primary_User_Grey.png',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                                 <img
@@ -255,7 +269,11 @@ export default function CaseStudy() {
                                     src={
                                         '/images/prolog/Secondary_User_Grey.png'
                                     }
-                                    onClick={() => setSelectedImage('/images/prolog/Secondary_User_Grey.png')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/prolog/Secondary_User_Grey.png',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                             </div>
@@ -290,7 +308,11 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                             </div>
@@ -298,9 +320,7 @@ export default function CaseStudy() {
 
                         <div className={styles.group}>
                             <div className={styles.subNumber}>5.2</div>
-                            <div className={styles.subHeading}>
-                                Branding & Style Guide
-                            </div>
+                            <div className={styles.subHeading}>Branding</div>
                             <div className={styles.sectionParagraph}>
                                 Our design philosophy centered on clarity and
                                 simplicity. Since the apprenticeship process is
@@ -316,7 +336,7 @@ export default function CaseStudy() {
                                 and help apprentices focus on what matters:
                                 their training and growth.
                             </div>
-                            <div className={styles.secContentContainer}>
+                            <div className={styles.brandingContentSpacing}>
                                 <div className={styles.gridTwo}>
                                     <div className={styles.gridOne}>
                                         <div className={styles.brandingTitle}>
@@ -324,31 +344,51 @@ export default function CaseStudy() {
                                         </div>
                                         <div className={styles.gridThree}>
                                             <img
-                                                className={styles.bigImage}
+                                                className={`${styles.bigImage} ${styles.clickable}`}
                                                 src={
                                                     '/images/prolog/White-Logo.png'
                                                 }
-                                            />
-                                            <img
-                                                className={styles.bigImage}
-                                                src={
-                                                    '/images/prolog/Reg-Logo.png'
+                                                onClick={() =>
+                                                    setSelectedImage(
+                                                        '/images/prolog/White-Logo.png',
+                                                    )
                                                 }
                                             />
                                             <img
-                                                className={styles.bigImage}
+                                                className={`${styles.bigImage} ${styles.clickable}`}
+                                                src={
+                                                    '/images/prolog/Reg-Logo.png'
+                                                }
+                                                onClick={() =>
+                                                    setSelectedImage(
+                                                        '/images/prolog/Reg-Logo.png',
+                                                    )
+                                                }
+                                            />
+                                            <img
+                                                className={`${styles.bigImage} ${styles.clickable}`}
                                                 src={
                                                     '/images/prolog/Orange-Logo.png'
+                                                }
+                                                onClick={() =>
+                                                    setSelectedImage(
+                                                        '/images/prolog/Orange-Logo.png',
+                                                    )
                                                 }
                                             />
                                         </div>
                                         <div className={styles.brandingTitle}>
-                                            Wordmarks
+                                            Wordmark
                                         </div>
                                         <img
-                                            className={styles.bigImage}
+                                            className={`${styles.bigImage} ${styles.clickable}`}
                                             src={
                                                 '/images/prolog/Reg_Wordmark.png'
+                                            }
+                                            onClick={() =>
+                                                setSelectedImage(
+                                                    '/images/prolog/Reg_Wordmark.png',
+                                                )
                                             }
                                         />
                                     </div>
@@ -357,9 +397,14 @@ export default function CaseStudy() {
                                             Typography
                                         </div>
                                         <img
-                                            className={styles.typeImage}
+                                            className={`${styles.typeImage} ${styles.clickable}`}
                                             src={
                                                 '/images/prolog/typography-style-guide.png'
+                                            }
+                                            onClick={() =>
+                                                setSelectedImage(
+                                                    '/images/prolog/typography-style-guide.png',
+                                                )
                                             }
                                         />
                                     </div>
@@ -385,25 +430,41 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                             </div>
@@ -467,13 +528,21 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
-                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/Under_Construction.jpeg',
+                                        )
+                                    }
                                     style={{cursor: 'pointer'}}
                                 />
                             </div>
