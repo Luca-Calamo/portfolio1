@@ -49,16 +49,28 @@ export default function CaseStudy() {
                     </div>
 
                     <div className={styles.links}>
-                        <a href='#' className={styles.linkItem}>
+                        <a
+                            href='https://www.figma.com/files/team/1547386274142350365/all-projects'
+                            className={styles.linkItem}
+                            target='_blank'
+                        >
                             Figma
                         </a>
-                        <a href='#' className={styles.linkItem}>
+                        <a
+                            href='https://github.com/Jinontheclock/ProLog'
+                            className={styles.linkItem}
+                            target='_blank'
+                        >
                             Github
                         </a>
                         <a href='#' className={styles.linkItem}>
                             Promotional Video
                         </a>
-                        <a href='#' className={styles.linkItem}>
+                        <a
+                            href='https://www.instagram.com/prolog.app/'
+                            target='_blank'
+                            className={styles.linkItem}
+                        >
                             Instagram
                         </a>
                     </div>
@@ -196,47 +208,6 @@ export default function CaseStudy() {
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>04</h3>
                         <h2 className={styles.sectionTitle}>Research</h2>
-                        {/* <div className={styles.group}>
-                            <div className={styles.subNumber}>4.1</div>
-                            <div className={styles.subHeading}>
-                                Understanding the Problem
-                            </div>
-                            <div className={styles.secContentContainer}>
-                                <div className={styles.gridTwo}>
-                                    <div className={styles.cardShadow}>
-                                        <h4 className={styles.cardTitle}>
-                                            Card Title
-                                        </h4>
-                                        <p className={styles.cardText}>
-                                            This is a description of the card
-                                            content. It provides more details
-                                            about the solution.
-                                        </p>
-                                    </div>
-
-                                    <div className={styles.cardShadow}>
-                                        <h4 className={styles.cardTitle}>
-                                            Card Title
-                                        </h4>
-                                        <p className={styles.cardText}>
-                                            This is a description of the card
-                                            content. It provides more details
-                                            about the solution.
-                                        </p>
-                                    </div>
-                                    <p className={styles.underText}>
-                                        lorum ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Donec vel sapien eget
-                                        nunc efficitur efficitur. Sed at ligula
-                                        a enim efficitur commodo. Curabitur ac
-                                        odio id nisl convallis tincidunt. Nulla
-                                        facilisi. In hac habitasse platea
-                                        dictumst. Proin ut dui sed metus
-                                        fermentum bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div> */}
 
                         <div className={styles.group}>
                             <div className={styles.subNumber}>4.1</div>
@@ -346,10 +317,53 @@ export default function CaseStudy() {
                                 their training and growth.
                             </div>
                             <div className={styles.secContentContainer}>
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
+                                <div className={styles.gridTwo}>
+                                    <div className={styles.gridOne}>
+                                        <div className={styles.brandingTitle}>
+                                            Logo
+                                        </div>
+                                        <div className={styles.gridThree}>
+                                            <img
+                                                className={styles.bigImage}
+                                                src={
+                                                    '/images/prolog/White-Logo.png'
+                                                }
+                                            />
+                                            <img
+                                                className={styles.bigImage}
+                                                src={
+                                                    '/images/prolog/Reg-Logo.png'
+                                                }
+                                            />
+                                            <img
+                                                className={styles.bigImage}
+                                                src={
+                                                    '/images/prolog/Orange-Logo.png'
+                                                }
+                                            />
+                                        </div>
+                                        <div className={styles.brandingTitle}>
+                                            Wordmarks
+                                        </div>
+                                        <img
+                                            className={styles.bigImage}
+                                            src={
+                                                '/images/prolog/Reg_Wordmark.png'
+                                            }
+                                        />
+                                    </div>
+                                    <div className={styles.gridOne}>
+                                        <div className={styles.brandingTitle}>
+                                            Typography
+                                        </div>
+                                        <img
+                                            className={styles.typeImage}
+                                            src={
+                                                '/images/prolog/typography-style-guide.png'
+                                            }
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -412,30 +426,20 @@ export default function CaseStudy() {
                                 totals, and actionable next steps became our
                                 priority. Everything else took a backseat.
                             </div>
+                            <div className={styles.gridOne}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/prolog/Lo-Fi_Wireframes.png'}
+                                />
+                            </div>
                             <div className={styles.gridTwo}>
                                 <img
                                     className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
+                                    src={'/images/prolog/Lo-Fi2_Wireframes.png'}
+                                />{' '}
                                 <img
                                     className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
+                                    src={'/images/prolog/Lo-Fi3_Wireframes.png'}
                                 />
                             </div>
                         </div>
