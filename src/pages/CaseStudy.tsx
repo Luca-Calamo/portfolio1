@@ -1,4 +1,5 @@
 import {useParams, Link} from 'react-router-dom';
+import {useState} from 'react';
 import {projects} from '../data/projects';
 import styles from './CaseStudy.module.css';
 import CompetitiveAnalysis from '../components/CompetitiveAnalysis/CompetitiveAnalysis';
@@ -9,6 +10,7 @@ export default function CaseStudy() {
     const currentId = parseInt(id || '1');
     const project = projects.find((p) => p.id === currentId);
     const nextProject = projects.find((p) => p.id === currentId + 1);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     if (!project) {
         return (
@@ -97,6 +99,8 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Dashboard_Mockup.png'}
+                                    onClick={() => setSelectedImage('/images/prolog/Dashboard_Mockup.png')}
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
@@ -130,8 +134,8 @@ export default function CaseStudy() {
                                 </div>
                                 <img
                                     className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                />
+                                    src={'/images/Under_Construction.jpeg'}                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}                                />
                             </div>
                         </div>
                     </div>
@@ -272,12 +276,16 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Primary_User_Grey.png'}
+                                    onClick={() => setSelectedImage('/images/prolog/Primary_User_Grey.png')}
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={
                                         '/images/prolog/Secondary_User_Grey.png'
                                     }
+                                    onClick={() => setSelectedImage('/images/prolog/Secondary_User_Grey.png')}
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
@@ -311,6 +319,8 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
@@ -361,18 +371,26 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
@@ -445,10 +463,14 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
+                                    onClick={() => setSelectedImage('/images/Under_Construction.jpeg')}
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
@@ -475,6 +497,30 @@ export default function CaseStudy() {
                     )}
                 </div>
             </div>
+            {selectedImage && (
+                <div
+                    className={styles.modalOverlay}
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div
+                        className={styles.modalContent}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className={styles.closeButton}
+                            onClick={() => setSelectedImage(null)}
+                            aria-label='Close image view'
+                        >
+                            ✕
+                        </button>
+                        <img
+                            src={selectedImage}
+                            alt='Full screen view'
+                            className={styles.fullScreenImage}
+                        />
+                    </div>
+                </div>
+            )}
         </article>
     );
 }
