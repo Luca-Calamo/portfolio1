@@ -60,12 +60,10 @@ export default function Project() {
                                 muted
                             />
                         ) : (
-                            <img
-                                src={project.heroImage}
+                            <img 
+                                src={project.heroImage} 
                                 alt={project.title}
-                                onClick={() =>
-                                    setSelectedImage(project.heroImage)
-                                }
+                                onClick={() => setSelectedImage(project.heroImage)}
                                 style={{cursor: 'pointer'}}
                             />
                         )}
@@ -79,8 +77,8 @@ export default function Project() {
                 <div className={styles.imageGalleryContainer}>
                     {project.images.map((img, index) => (
                         <div key={index} className={styles.imageGallery}>
-                            <img
-                                src={img}
+                            <img 
+                                src={img} 
                                 alt={`Image ${index + 1}`}
                                 onClick={() => setSelectedImage(img)}
                                 style={{cursor: 'pointer'}}
