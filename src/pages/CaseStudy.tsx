@@ -414,7 +414,16 @@ export default function CaseStudy() {
                                     src={'/images/prolog/Lo-Fi_Wireframes.png'}
                                 />
                             </div>
-                            <div className={styles.gridTwo}></div>
+                            <div className={styles.gridTwo}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/prolog/Lo-Fi2_Wireframes.png'}
+                                />{' '}
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/prolog/Lo-Fi3_Wireframes.png'}
+                                />
+                            </div>
                         </div>
                     </div>
 
