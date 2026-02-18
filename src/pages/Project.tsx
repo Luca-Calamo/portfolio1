@@ -1,4 +1,5 @@
 import {useParams, Link} from 'react-router-dom';
+import {useState} from 'react';
 import {projects} from '../data/projects';
 import styles from './Project.module.css';
 import CaseStudy from './CaseStudy';
@@ -8,6 +9,7 @@ export default function Project() {
     const currentId = parseInt(id || '1');
     const project = projects.find((p) => p.id === currentId);
     const nextProject = projects.find((p) => p.id === currentId + 1);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     if (!project) {
         return (
@@ -58,7 +60,12 @@ export default function Project() {
                                 muted
                             />
                         ) : (
-                            <img src={project.heroImage} alt={project.title} />
+                            <img 
+                                src={project.heroImage} 
+                                alt={project.title}
+                                onClick={() => setSelectedImage(project.heroImage)}
+                                style={{cursor: 'pointer'}}
+                            />
                         )}
                     </div>
                 </div>
@@ -70,7 +77,12 @@ export default function Project() {
                 <div className={styles.imageGalleryContainer}>
                     {project.images.map((img, index) => (
                         <div key={index} className={styles.imageGallery}>
-                            <img src={img} alt={`Image ${index + 1}`} />
+                            <img 
+                                src={img} 
+                                alt={`Image ${index + 1}`}
+                                onClick={() => setSelectedImage(img)}
+                                style={{cursor: 'pointer'}}
+                            />
                         </div>
                     ))}
                 </div>
@@ -88,6 +100,30 @@ export default function Project() {
                     </section>
                 )}
             </div>
+            {selectedImage && (
+                <div
+                    className={styles.modalOverlay}
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div
+                        className={styles.modalContent}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className={styles.closeButton}
+                            onClick={() => setSelectedImage(null)}
+                            aria-label='Close image view'
+                        >
+                            ✕
+                        </button>
+                        <img
+                            src={selectedImage}
+                            alt='Full screen view'
+                            className={styles.fullScreenImage}
+                        />
+                    </div>
+                </div>
+            )}
         </article>
     );
 }
