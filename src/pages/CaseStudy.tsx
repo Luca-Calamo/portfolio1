@@ -304,18 +304,14 @@ export default function CaseStudy() {
                                 solved their biggest pain points around progress
                                 tracking and training management.
                             </div>
-                            <div className={styles.secContentContainer}>
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
-                                />
-                            </div>
+
+                            <iframe
+                                style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
+                                width='100%'
+                                height='450'
+                                src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
+                                allowFullScreen
+                            />
                         </div>
 
                         <div className={styles.group}>
@@ -491,16 +487,34 @@ export default function CaseStudy() {
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Lo-Fi_Wireframes.png'}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/prolog/Lo-Fi_Wireframes.png',
+                                        )
+                                    }
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                             <div className={styles.gridTwo}>
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Lo-Fi2_Wireframes.png'}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/prolog/Lo-Fi2_Wireframes.png',
+                                        )
+                                    }
+                                    style={{cursor: 'pointer'}}
                                 />{' '}
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/prolog/Lo-Fi3_Wireframes.png'}
+                                    onClick={() =>
+                                        setSelectedImage(
+                                            '/images/prolog/Lo-Fi3_Wireframes.png',
+                                        )
+                                    }
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
