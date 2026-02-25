@@ -10,7 +10,6 @@ export default function CompetitiveAnalysis() {
                         padding: 48px 40px 64px;
                         position: relative;
                         overflow-x: hidden;
-                        box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
                     }
                     .comp-analysis-wrapper::before {
                         content: '';
@@ -41,13 +40,6 @@ export default function CompetitiveAnalysis() {
                         display: flex;
                         align-items: center;
                         gap: 8px;
-                    }
-                    .comp-eyebrow::before {
-                        content: '';
-                        display: inline-block;
-                        width: 20px;
-                        height: 1px;
-                        background: #f5a623;
                     }
                     .comp-h1 {
                         font-family: 'Bebas Neue', sans-serif;
@@ -302,9 +294,7 @@ export default function CompetitiveAnalysis() {
                 <div className='comp-analysis-content'>
                     <header className='comp-header'>
                         <div className='comp-header-left'>
-                            <div className='comp-eyebrow'>
-                                UX Research · 2024
-                            </div>
+                            <div className='comp-eyebrow'>ProLog · 2024</div>
                             <h2 className='comp-h1'>
                                 Competitive
                                 <br />
@@ -891,7 +881,7 @@ export default function CompetitiveAnalysis() {
                     </div>
 
                     <footer className='comp-footer'>
-                        <div className='ft-left'>Team TradeLift · WEB</div>
+                        <div className='ft-left'>ProLog</div>
                         <div className='ft-right'>
                             Competitive Analysis Matrix · 8 Competitors Reviewed
                         </div>

@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {projects} from '../data/projects';
 import styles from './CaseStudy.module.css';
 import CompetitiveAnalysis from '../components/CompetitiveAnalysis/CompetitiveAnalysis';
-// import TextCards from '../components/TextCards/TextCards';
+import UserFlow from '../components/UserFlow';
 
 export default function CaseStudy() {
     const {id} = useParams<{id: string}>();
@@ -305,13 +305,7 @@ export default function CaseStudy() {
                                 tracking and training management.
                             </div>
 
-                            <iframe
-                                style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
-                                width='100%'
-                                height='450'
-                                src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
-                                allowFullScreen
-                            />
+                            <UserFlow />
                         </div>
 
                         <div className={styles.group}>
@@ -410,9 +404,7 @@ export default function CaseStudy() {
 
                         <div className={styles.group}>
                             <div className={styles.subNumber}>5.3</div>
-                            <div className={styles.subHeading}>
-                                Site Map Over Time
-                            </div>
+                            <div className={styles.subHeading}>Site Map</div>
                             <div className={styles.sectionParagraph}>
                                 Our initial architecture included a "Resources"
                                 page combining school info and financial
@@ -422,7 +414,15 @@ export default function CaseStudy() {
                                 Skills. This made the app feel cohesive rather
                                 than scattered.
                             </div>
-                            <div className={styles.gridTwoTwo}>
+
+                            <iframe
+                                style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
+                                width='100%'
+                                height='450'
+                                src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
+                                allowFullScreen
+                            />
+                            {/* <div className={styles.gridTwoTwo}>
                                 <img
                                     className={styles.bigImage}
                                     src={'/images/Under_Construction.jpeg'}
@@ -463,7 +463,7 @@ export default function CaseStudy() {
                                     }
                                     style={{cursor: 'pointer'}}
                                 />
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className={styles.group}>
