@@ -481,7 +481,7 @@ export default function CaseStudy() {
                                     allowFullScreen
                                 />
 
-                                <div className={styles.gridOne}>
+                                {/* <div className={styles.gridOne}>
                                     <img
                                         className={styles.bigImage}
                                         src={
@@ -494,7 +494,7 @@ export default function CaseStudy() {
                                         }
                                         style={{cursor: 'pointer'}}
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
