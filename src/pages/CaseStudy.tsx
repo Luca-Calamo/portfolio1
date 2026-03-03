@@ -476,10 +476,25 @@ export default function CaseStudy() {
                                         border: '1px solid rgba(0, 0, 0, 0.1)',
                                     }}
                                     width='100%'
-                                    height='450'
+                                    height='600'
                                     src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
                                     allowFullScreen
                                 />
+
+                                <div className={styles.gridOne}>
+                                    <img
+                                        className={styles.bigImage}
+                                        src={
+                                            '/images/prolog/Dashboard_Screens.png'
+                                        }
+                                        onClick={() =>
+                                            setSelectedImage(
+                                                '/images/prolog/Dashboard_Screens.png',
+                                            )
+                                        }
+                                        style={{cursor: 'pointer'}}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
