@@ -631,25 +631,25 @@ function UserFlowSVG({isFullscreen = false}) {
         {from: 'examprep', to: 'improvement'},
     ];
 
-    const nodeMap = {};
-    nodes.forEach((n) => {
+    const nodeMap: { [key: string]: any } = {};
+    nodes.forEach((n: any) => {
         nodeMap[n.id] = n;
     });
 
-    function cx(n) {
+    function cx(n: any) {
         return n.x + n.w / 2;
     }
-    function cy(n) {
+    function cy(n: any) {
         return n.y + n.h / 2;
     }
-    function right(n) {
+    function right(n: any) {
         return n.x + n.w;
     }
-    function left(n) {
+    function left(n: any) {
         return n.x;
     }
 
-    function elbowPath(a, b) {
+    function elbowPath(a: any, b: any) {
         const x1 = right(a),
             y1 = cy(a);
         const x2 = left(b),
@@ -674,17 +674,17 @@ function UserFlowSVG({isFullscreen = false}) {
         ].join(' ');
     }
 
-    const colors = {
+    const colors: { [key: string]: any } = {
         main: {fill: '#1e1008', stroke: '#f5a623', text: '#ffffff'},
         neutral: {fill: '#13161b', stroke: '#d8d8d8', text: '#d8d8d8'},
     };
 
-    function fontSize(type) {
+    function fontSize(type: string) {
         return type === 'main' ? 17 : 15.5;
     }
 
-    function delay(id) {
-        const depthMap = {
+    function delay(id: string) {
+        const depthMap: { [key: string]: number } = {
             onboarding: 0,
             signup: 1,
             login: 1,
@@ -758,7 +758,7 @@ function UserFlowSVG({isFullscreen = false}) {
             </defs>
 
             <g clipPath={isFullscreen ? 'url(#fs-clip)' : undefined}>
-                {edges.map((e, i) => {
+                {edges.map((e: any, i: number) => {
                     const a = nodeMap[e.from];
                     const b = nodeMap[e.to];
                     if (!a || !b) return null;
@@ -779,7 +779,7 @@ function UserFlowSVG({isFullscreen = false}) {
                     );
                 })}
 
-                {nodes.map((n) => {
+                {nodes.map((n: any) => {
                     const c = colors[n.type];
                     const fs = fontSize(n.type);
                     return (
