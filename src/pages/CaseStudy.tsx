@@ -280,11 +280,6 @@ export default function CaseStudy() {
                         </div>
                     </div>
 
-                    <div className={styles.group}>
-                        <div className={styles.subNumber}>4.3</div>
-                        <div className={styles.subHeading}>User Research</div>
-                    </div>
-
                     <div className={styles.section}>
                         <h3 className={styles.mainNumber}>05</h3>
                         <div className={styles.group}>
@@ -403,70 +398,6 @@ export default function CaseStudy() {
                         </div>
 
                         <div className={styles.group}>
-                            <div className={styles.subNumber}>5.3</div>
-                            <div className={styles.subHeading}>Site Map</div>
-                            <div className={styles.sectionParagraph}>
-                                Our initial architecture included a "Resources"
-                                page combining school info and financial
-                                databases. User testing revealed this violated
-                                our value proposition. We restructured around
-                                four key areas: Dashboard, Work, School, and
-                                Skills. This made the app feel cohesive rather
-                                than scattered.
-                            </div>
-
-                            <iframe
-                                style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
-                                width='100%'
-                                height='450'
-                                src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
-                                allowFullScreen
-                            />
-                            {/* <div className={styles.gridTwoTwo}>
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
-                                />
-                            </div> */}
-                        </div>
-
-                        <div className={styles.group}>
                             <div className={styles.subNumber}>5.4</div>
                             <div className={styles.subHeading}>
                                 Lo-Fi Wireframes
@@ -539,25 +470,15 @@ export default function CaseStudy() {
                                         allowFullScreen
                                     ></iframe>
                                 </div>
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
-                                />
-                                <img
-                                    className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
-                                    onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
-                                        )
-                                    }
-                                    style={{cursor: 'pointer'}}
+
+                                <iframe
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                                    }}
+                                    width='100%'
+                                    height='450'
+                                    src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
+                                    allowFullScreen
                                 />
                             </div>
                         </div>
