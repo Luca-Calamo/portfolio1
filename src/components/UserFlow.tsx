@@ -845,8 +845,7 @@ function UserFlowSVG({isFullscreen = false}) {
         return ((depthMap[id] || 0) * 0.07 + 0.05).toFixed(2) + 's';
     }
 
-    // Fullscreen zooms into just the 4 main sections + their children
-    // x: 770 (just left of school) to 1930 (right edge of content), y: 175 to 1155
+    // Show full diagram in fullscreen - includes all nodes from top-left to bottom-right
     const viewBox = isFullscreen ? '790 185 1140 965' : `0 0 ${W} ${H}`;
 
     return (
