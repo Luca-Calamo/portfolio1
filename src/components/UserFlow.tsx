@@ -1,7 +1,54 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 export default function UserFlow() {
     const [isFullscreen, setIsFullscreen] = useState(false);
+    const [zoomLevel, setZoomLevel] = useState<number>(2);
+    const [panOffset, setPanOffset] = useState<{x: number; y: number}>({
+        x: 0,
+        y: 0,
+    });
+    const [isDragging, setIsDragging] = useState<boolean>(false);
+    const [dragStart, setDragStart] = useState<{x: number; y: number}>({
+        x: 0,
+        y: 0,
+    });
+
+    useEffect(() => {
+        if (zoomLevel === 2) {
+            setPanOffset({x: 0, y: 0});
+        }
+    }, [zoomLevel]);
+
+    const handleZoomIn = () => {
+        setZoomLevel((prev) => (prev < 4 ? prev + 0.5 : prev));
+    };
+
+    const handleZoomOut = () => {
+        setZoomLevel((prev) => (prev > 2 ? prev - 0.5 : prev));
+    };
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (zoomLevel > 2) {
+            setIsDragging(true);
+            setDragStart({
+                x: e.clientX - panOffset.x,
+                y: e.clientY - panOffset.y,
+            });
+        }
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (isDragging && zoomLevel > 2) {
+            setPanOffset({
+                x: e.clientX - dragStart.x,
+                y: e.clientY - dragStart.y,
+            });
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
 
     return (
         <>
@@ -156,9 +203,49 @@ export default function UserFlow() {
                     .uf-modal-close:hover {
                         transform: scale(1.2);
                     }
+                    .uf-zoom-controls {
+                        position: fixed;
+                        top: 70px;
+                        right: 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        padding: 12px 16px;
+                        border-radius: 8px;
+                        z-index: 10001;
+                    }
+                    .uf-zoom-button {
+                        background-color: #f5a623;
+                        color: #000;
+                        border: none;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 4px;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: background-color 0.2s ease, transform 0.2s ease;
+                        padding: 0;
+                        font-weight: 600;
+                    }
+                    .uf-zoom-button:hover {
+                        background-color: #f5b83a;
+                        transform: scale(1.05);
+                    }
+                    .uf-zoom-button:active {
+                        transform: scale(0.95);
+                    }
+                    .uf-zoom-level {
+                        color: white;
+                        font-weight: 600;
+                        min-width: 50px;
+                        text-align: center;
+                        font-size: 0.95rem;
+                    }
                     .uf-modal-svg {
-                        width: 100%;
-                        height: 100%;
                         display: block;
                     }
                     .uf-modal-bg-wrapper {
@@ -311,6 +398,9 @@ export default function UserFlow() {
                     <div
                         className='uf-modal-content'
                         onClick={(e) => e.stopPropagation()}
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseUp}
                     >
                         <button
                             className='uf-modal-close'
@@ -319,8 +409,46 @@ export default function UserFlow() {
                         >
                             ✕
                         </button>
-                        <div className='uf-modal-bg-wrapper'>
-                            <UserFlowSVG isFullscreen={true} />
+                        <div className='uf-zoom-controls'>
+                            <button
+                                className='uf-zoom-button'
+                                onClick={handleZoomOut}
+                                aria-label='Zoom out'
+                                title='Zoom out'
+                            >
+                                −
+                            </button>
+                            <span className='uf-zoom-level'>
+                                {Math.round((zoomLevel - 1) * 100)}%
+                            </span>
+                            <button
+                                className='uf-zoom-button'
+                                onClick={handleZoomIn}
+                                aria-label='Zoom in'
+                                title='Zoom in'
+                            >
+                                +
+                            </button>
+                        </div>
+                        <div
+                            className='uf-modal-bg-wrapper'
+                            onMouseDown={handleMouseDown}
+                            style={{
+                                cursor:
+                                    zoomLevel > 2 && isDragging
+                                        ? 'grabbing'
+                                        : zoomLevel > 2
+                                          ? 'grab'
+                                          : 'default',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    transform: `scale(${zoomLevel}) translate(${panOffset.x}px, ${panOffset.y}px)`,
+                                }}
+                            >
+                                <UserFlowSVG isFullscreen={true} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -631,7 +759,7 @@ function UserFlowSVG({isFullscreen = false}) {
         {from: 'examprep', to: 'improvement'},
     ];
 
-    const nodeMap: { [key: string]: any } = {};
+    const nodeMap: {[key: string]: any} = {};
     nodes.forEach((n: any) => {
         nodeMap[n.id] = n;
     });
@@ -674,7 +802,7 @@ function UserFlowSVG({isFullscreen = false}) {
         ].join(' ');
     }
 
-    const colors: { [key: string]: any } = {
+    const colors: {[key: string]: any} = {
         main: {fill: '#1e1008', stroke: '#f5a623', text: '#ffffff'},
         neutral: {fill: '#13161b', stroke: '#d8d8d8', text: '#d8d8d8'},
     };
@@ -684,7 +812,7 @@ function UserFlowSVG({isFullscreen = false}) {
     }
 
     function delay(id: string) {
-        const depthMap: { [key: string]: number } = {
+        const depthMap: {[key: string]: number} = {
             onboarding: 0,
             signup: 1,
             login: 1,

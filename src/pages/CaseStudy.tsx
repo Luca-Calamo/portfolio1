@@ -1,5 +1,5 @@
 import {useParams, Link} from 'react-router-dom';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {projects} from '../data/projects';
 import styles from './CaseStudy.module.css';
 import CompetitiveAnalysis from '../components/CompetitiveAnalysis/CompetitiveAnalysis';
@@ -11,6 +11,59 @@ export default function CaseStudy() {
     const project = projects.find((p) => p.id === currentId);
     const nextProject = projects.find((p) => p.id === currentId + 1);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [zoomLevel, setZoomLevel] = useState<number>(1);
+    const [panOffset, setPanOffset] = useState<{x: number; y: number}>({
+        x: 0,
+        y: 0,
+    });
+    const [isDragging, setIsDragging] = useState<boolean>(false);
+    const [dragStart, setDragStart] = useState<{x: number; y: number}>({
+        x: 0,
+        y: 0,
+    });
+
+    useEffect(() => {
+        if (zoomLevel === 1) {
+            setPanOffset({x: 0, y: 0});
+        }
+    }, [zoomLevel]);
+
+    const handleZoomIn = () => {
+        setZoomLevel((prev) => (prev < 3 ? prev + 0.5 : prev));
+    };
+
+    const handleZoomOut = () => {
+        setZoomLevel((prev) => (prev > 1 ? prev - 0.5 : prev));
+    };
+
+    const handleImageSelect = (imagePath: string) => {
+        setSelectedImage(imagePath);
+        setZoomLevel(1);
+        setPanOffset({x: 0, y: 0});
+    };
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (zoomLevel > 1) {
+            setIsDragging(true);
+            setDragStart({
+                x: e.clientX - panOffset.x,
+                y: e.clientY - panOffset.y,
+            });
+        }
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (isDragging && zoomLevel > 1) {
+            setPanOffset({
+                x: e.clientX - dragStart.x,
+                y: e.clientY - dragStart.y,
+            });
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
 
     if (!project) {
         return (
@@ -63,7 +116,11 @@ export default function CaseStudy() {
                         >
                             Github
                         </a>
-                        <a href='#' className={styles.linkItem}>
+                        <a
+                            href='https://youtu.be/vWXMGQpBQfs'
+                            className={styles.linkItem}
+                            target='_blank'
+                        >
                             Promotional Video
                         </a>
                         <a
@@ -112,7 +169,7 @@ export default function CaseStudy() {
                                     className={styles.bigImage}
                                     src={'/images/prolog/Dashboard_Mockup.png'}
                                     onClick={() =>
-                                        setSelectedImage(
+                                        handleImageSelect(
                                             '/images/prolog/Dashboard_Mockup.png',
                                         )
                                     }
@@ -150,10 +207,10 @@ export default function CaseStudy() {
                                 </div>
                                 <img
                                     className={styles.bigImage}
-                                    src={'/images/Under_Construction.jpeg'}
+                                    src={'/images/prolog/Leana_SC.JPG'}
                                     onClick={() =>
-                                        setSelectedImage(
-                                            '/images/Under_Construction.jpeg',
+                                        handleImageSelect(
+                                            '/images/prolog/Leana_SC.JPG',
                                         )
                                     }
                                     style={{cursor: 'pointer'}}
@@ -258,7 +315,7 @@ export default function CaseStudy() {
                                     className={styles.bigImage}
                                     src={'/images/prolog/Primary_User_Grey.png'}
                                     onClick={() =>
-                                        setSelectedImage(
+                                        handleImageSelect(
                                             '/images/prolog/Primary_User_Grey.png',
                                         )
                                     }
@@ -270,7 +327,7 @@ export default function CaseStudy() {
                                         '/images/prolog/Secondary_User_Grey.png'
                                     }
                                     onClick={() =>
-                                        setSelectedImage(
+                                        handleImageSelect(
                                             '/images/prolog/Secondary_User_Grey.png',
                                         )
                                     }
@@ -334,7 +391,7 @@ export default function CaseStudy() {
                                                     '/images/prolog/White-Logo.png'
                                                 }
                                                 onClick={() =>
-                                                    setSelectedImage(
+                                                    handleImageSelect(
                                                         '/images/prolog/White-Logo.png',
                                                     )
                                                 }
@@ -345,7 +402,7 @@ export default function CaseStudy() {
                                                     '/images/prolog/Reg-Logo.png'
                                                 }
                                                 onClick={() =>
-                                                    setSelectedImage(
+                                                    handleImageSelect(
                                                         '/images/prolog/Reg-Logo.png',
                                                     )
                                                 }
@@ -356,7 +413,7 @@ export default function CaseStudy() {
                                                     '/images/prolog/Orange-Logo.png'
                                                 }
                                                 onClick={() =>
-                                                    setSelectedImage(
+                                                    handleImageSelect(
                                                         '/images/prolog/Orange-Logo.png',
                                                     )
                                                 }
@@ -371,7 +428,7 @@ export default function CaseStudy() {
                                                 '/images/prolog/Reg_Wordmark.png'
                                             }
                                             onClick={() =>
-                                                setSelectedImage(
+                                                handleImageSelect(
                                                     '/images/prolog/Reg_Wordmark.png',
                                                 )
                                             }
@@ -387,7 +444,7 @@ export default function CaseStudy() {
                                                 '/images/prolog/typography-style-guide.png'
                                             }
                                             onClick={() =>
-                                                setSelectedImage(
+                                                handleImageSelect(
                                                     '/images/prolog/typography-style-guide.png',
                                                 )
                                             }
@@ -419,7 +476,7 @@ export default function CaseStudy() {
                                     className={styles.bigImage}
                                     src={'/images/prolog/Lo-Fi_Wireframes.png'}
                                     onClick={() =>
-                                        setSelectedImage(
+                                        handleImageSelect(
                                             '/images/prolog/Lo-Fi_Wireframes.png',
                                         )
                                     }
@@ -431,7 +488,7 @@ export default function CaseStudy() {
                                     className={styles.bigImage}
                                     src={'/images/prolog/Lo-Fi2_Wireframes.png'}
                                     onClick={() =>
-                                        setSelectedImage(
+                                        handleImageSelect(
                                             '/images/prolog/Lo-Fi2_Wireframes.png',
                                         )
                                     }
@@ -441,7 +498,7 @@ export default function CaseStudy() {
                                     className={styles.bigImage}
                                     src={'/images/prolog/Lo-Fi3_Wireframes.png'}
                                     onClick={() =>
-                                        setSelectedImage(
+                                        handleImageSelect(
                                             '/images/prolog/Lo-Fi3_Wireframes.png',
                                         )
                                     }
@@ -528,6 +585,9 @@ export default function CaseStudy() {
                     <div
                         className={styles.modalContent}
                         onClick={(e) => e.stopPropagation()}
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseUp}
                     >
                         <button
                             className={styles.closeButton}
@@ -536,11 +596,49 @@ export default function CaseStudy() {
                         >
                             ✕
                         </button>
-                        <img
-                            src={selectedImage}
-                            alt='Full screen view'
-                            className={styles.fullScreenImage}
-                        />
+                        <div className={styles.zoomControls}>
+                            <button
+                                className={styles.zoomButton}
+                                onClick={handleZoomOut}
+                                aria-label='Zoom out'
+                                title='Zoom out'
+                            >
+                                −
+                            </button>
+                            <span className={styles.zoomLevel}>
+                                {Math.round(zoomLevel * 100)}%
+                            </span>
+                            <button
+                                className={styles.zoomButton}
+                                onClick={handleZoomIn}
+                                aria-label='Zoom in'
+                                title='Zoom in'
+                            >
+                                +
+                            </button>
+                        </div>
+                        <div
+                            className={styles.imageContainer}
+                            onMouseDown={handleMouseDown}
+                            style={{
+                                cursor:
+                                    zoomLevel > 1 && isDragging
+                                        ? 'grabbing'
+                                        : zoomLevel > 1
+                                          ? 'grab'
+                                          : 'default',
+                            }}
+                        >
+                            <img
+                                src={selectedImage}
+                                alt='Full screen view'
+                                className={styles.fullScreenImage}
+                                style={{
+                                    transform: `scale(${zoomLevel}) translate(${panOffset.x}px, ${panOffset.y}px)`,
+                                }}
+                                draggable={false}
+                            />
+                        </div>
                     </div>
                 </div>
             )}
