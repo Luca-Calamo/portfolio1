@@ -79,8 +79,11 @@ export const projects: Project[] = [
             'This project is  designed to present Italy as a cohesive cultural experience rather than a collection of familiar tourist imagery. Italy is often portrayed through its ancient statues and historic structures,  while this magazine showcases its living spirit, vibrant culture, and emotions it brings out. A minimalist design allows the emotions of the subjects to pull the reader in, resonating with their desire for excitement. The cover being one connecting image represents the continuity of their journey, doubling as a striking visual that stands out on shelves. The final message speaks to the reader, inspiring them to step into the adventure and answer the call.',
         tools: ['Adobe InDesign', 'Adobe Photoshop'],
         images: [
+            '/images/magazine/Rome_Mockup.png',
             '/images/magazine/Venice Spread Mockup.png',
-            '/images/magazine/Rome Spread.png',
+            // '/images/magazine/Rome Spread.png',
+            // '/images/magazine/Florence_Spread.png',
+            '/images/magazine/Florence_Mockup.png',
             '/images/magazine/Cover Spread.png',
         ],
     },
