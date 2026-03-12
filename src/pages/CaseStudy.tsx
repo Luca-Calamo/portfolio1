@@ -65,6 +65,15 @@ export default function CaseStudy() {
         setIsDragging(false);
     };
 
+    const handleWheel = (e: React.WheelEvent) => {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            handleZoomIn();
+        } else {
+            handleZoomOut();
+        }
+    };
+
     if (!project) {
         return (
             <div className={styles.notFound}>
@@ -103,11 +112,11 @@ export default function CaseStudy() {
 
                     <div className={styles.links}>
                         <a
-                            href='https://www.figma.com/files/team/1547386274142350365/all-projects'
+                            href='https://www.figma.com/proto/ZmmIx6VY9EicEFrv7Rvdjh/WireFrames?node-id=3814-20926&p=f&t=RTcMMfEdd8ASuVyT-1&scaling=scale-down&content-scaling=fixed&page-id=2332%3A2031&starting-point-node-id=3814%3A20926&show-proto-sidebar=1'
                             className={styles.linkItem}
                             target='_blank'
                         >
-                            Figma
+                            Prototype
                         </a>
                         <a
                             href='https://github.com/Jinontheclock/ProLog'
@@ -584,7 +593,6 @@ export default function CaseStudy() {
                 >
                     <div
                         className={styles.modalContent}
-                        onClick={(e) => e.stopPropagation()}
                         onMouseMove={handleMouseMove}
                         onMouseUp={handleMouseUp}
                         onMouseLeave={handleMouseUp}
@@ -619,7 +627,6 @@ export default function CaseStudy() {
                         </div>
                         <div
                             className={styles.imageContainer}
-                            onMouseDown={handleMouseDown}
                             style={{
                                 cursor:
                                     zoomLevel > 1 && isDragging
@@ -633,6 +640,9 @@ export default function CaseStudy() {
                                 src={selectedImage}
                                 alt='Full screen view'
                                 className={styles.fullScreenImage}
+                                onMouseDown={handleMouseDown}
+                                onWheel={handleWheel}
+                                onClick={(e) => e.stopPropagation()}
                                 style={{
                                     transform: `scale(${zoomLevel}) translate(${panOffset.x}px, ${panOffset.y}px)`,
                                 }}

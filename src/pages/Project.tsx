@@ -1,5 +1,5 @@
 import {useParams, Link} from 'react-router-dom';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {projects} from '../data/projects';
 import styles from './Project.module.css';
 import CaseStudy from './CaseStudy';
@@ -10,6 +10,68 @@ export default function Project() {
     const project = projects.find((p) => p.id === currentId);
     const nextProject = projects.find((p) => p.id === currentId + 1);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [zoomLevel, setZoomLevel] = useState<number>(1);
+    const [panOffset, setPanOffset] = useState<{x: number; y: number}>({
+        x: 0,
+        y: 0,
+    });
+    const [isDragging, setIsDragging] = useState<boolean>(false);
+    const [dragStart, setDragStart] = useState<{x: number; y: number}>({
+        x: 0,
+        y: 0,
+    });
+
+    const handleZoomIn = () => {
+        setZoomLevel((prev) => (prev < 3 ? prev + 0.5 : prev));
+    };
+
+    const handleZoomOut = () => {
+        setZoomLevel((prev) => (prev > 1 ? prev - 0.5 : prev));
+    };
+
+    const handleImageSelect = (imagePath: string) => {
+        setSelectedImage(imagePath);
+        setZoomLevel(1);
+        setPanOffset({x: 0, y: 0});
+    };
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (zoomLevel > 1) {
+            setIsDragging(true);
+            setDragStart({
+                x: e.clientX - panOffset.x,
+                y: e.clientY - panOffset.y,
+            });
+        }
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (isDragging && zoomLevel > 1) {
+            setPanOffset({
+                x: e.clientX - dragStart.x,
+                y: e.clientY - dragStart.y,
+            });
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleWheel = (e: React.WheelEvent) => {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            handleZoomIn();
+        } else {
+            handleZoomOut();
+        }
+    };
+
+    useEffect(() => {
+        if (zoomLevel === 1) {
+            setPanOffset({x: 0, y: 0});
+        }
+    }, [zoomLevel]);
 
     if (!project) {
         return (
@@ -60,10 +122,12 @@ export default function Project() {
                                 muted
                             />
                         ) : (
-                            <img 
-                                src={project.heroImage} 
+                            <img
+                                src={project.heroImage}
                                 alt={project.title}
-                                onClick={() => setSelectedImage(project.heroImage)}
+                                onClick={() =>
+                                    handleImageSelect(project.heroImage)
+                                }
                                 style={{cursor: 'pointer'}}
                             />
                         )}
@@ -77,10 +141,10 @@ export default function Project() {
                 <div className={styles.imageGalleryContainer}>
                     {project.images.map((img, index) => (
                         <div key={index} className={styles.imageGallery}>
-                            <img 
-                                src={img} 
+                            <img
+                                src={img}
                                 alt={`Image ${index + 1}`}
-                                onClick={() => setSelectedImage(img)}
+                                onClick={() => handleImageSelect(img)}
                                 style={{cursor: 'pointer'}}
                             />
                         </div>
@@ -107,7 +171,9 @@ export default function Project() {
                 >
                     <div
                         className={styles.modalContent}
-                        onClick={(e) => e.stopPropagation()}
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseUp}
                     >
                         <button
                             className={styles.closeButton}
@@ -116,11 +182,50 @@ export default function Project() {
                         >
                             ✕
                         </button>
-                        <img
-                            src={selectedImage}
-                            alt='Full screen view'
-                            className={styles.fullScreenImage}
-                        />
+                        <div
+                            className={styles.zoomControls}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                className={styles.zoomButton}
+                                onClick={handleZoomOut}
+                            >
+                                −
+                            </button>
+                            <span className={styles.zoomLevel}>
+                                {Math.round(zoomLevel * 100)}%
+                            </span>
+                            <button
+                                className={styles.zoomButton}
+                                onClick={handleZoomIn}
+                            >
+                                +
+                            </button>
+                        </div>
+                        <div
+                            className={styles.imageContainer}
+                            style={{
+                                cursor:
+                                    zoomLevel > 1 && isDragging
+                                        ? 'grabbing'
+                                        : zoomLevel > 1
+                                          ? 'grab'
+                                          : 'default',
+                            }}
+                        >
+                            <img
+                                src={selectedImage}
+                                alt='Full screen view'
+                                className={styles.fullScreenImage}
+                                onMouseDown={handleMouseDown}
+                                onWheel={handleWheel}
+                                onClick={(e) => e.stopPropagation()}
+                                style={{
+                                    transform: `scale(${zoomLevel}) translate(${panOffset.x}px, ${panOffset.y}px)`,
+                                }}
+                                draggable={false}
+                            />
+                        </div>
                     </div>
                 </div>
             )}
