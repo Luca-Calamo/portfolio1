@@ -544,30 +544,59 @@ export default function CaseStudy() {
                                     src='https://embed.figma.com/design/0WRv7S6gL4xvz43Pk2Nc9W/Untitled?node-id=0-1&embed-host=share'
                                     allowFullScreen
                                 />
-
-                                {/* <div className={styles.gridOne}>
-                                    <img
-                                        className={styles.bigImage}
-                                        src={
-                                            '/images/prolog/Dashboard_Screens.png'
-                                        }
-                                        onClick={() =>
-                                            setSelectedImage(
-                                                '/images/prolog/Dashboard_Screens.png',
-                                            )
-                                        }
-                                        style={{cursor: 'pointer'}}
-                                    />
-                                </div> */}
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.section}>
-                        <h3 className={styles.mainNumber}>07</h3>
-                        <h2 className={styles.sectionTitle}>
-                            Promotional Material
-                        </h2>
+                    <div className={styles.group}>
+                        <div className={styles.section}>
+                            <h3 className={styles.mainNumber}>07</h3>
+                            <h2 className={styles.sectionTitle}>
+                                Promotional Material
+                            </h2>
+                            <div className={styles.gridTwo}>
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/prolog/Brochure_1.png'}
+                                    onClick={() =>
+                                        handleImageSelect(
+                                            '/images/prolog/Brochure_1.png',
+                                        )
+                                    }
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={'/images/prolog/Brochure_2.png'}
+                                    onClick={() =>
+                                        handleImageSelect(
+                                            '/images/prolog/Brochure_2.png',
+                                        )
+                                    }
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={
+                                        '/images/prolog/Business_Card_Front.png'
+                                    }
+                                    onClick={() =>
+                                        handleImageSelect(
+                                            '/images/prolog/Business_Card_Front.png',
+                                        )
+                                    }
+                                />
+                                <img
+                                    className={styles.bigImage}
+                                    src={
+                                        '/images/prolog/Business_Card_Back.png'
+                                    }
+                                    onClick={() =>
+                                        handleImageSelect(
+                                            '/images/prolog/Business_Card_Back.png',
+                                        )
+                                    }
+                                />
+                            </div>
+                        </div>
                     </div>
 
                     {nextProject && (
