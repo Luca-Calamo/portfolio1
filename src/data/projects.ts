@@ -56,17 +56,16 @@ export const projects: Project[] = [
     {
         id: 4,
         role: 'UX/UI Design',
-        title: 'Project 3',
+        title: 'YumYum Land',
         year: 2024,
-        heroImage: '/images/Under_Construction.jpeg',
+        heroImage: '/images/yumyumland/Brownie.png',
         description:
             "Accessibility in design is not a feature—it's a fundamental principle. Creating interfaces that work for everyone, regardless of ability, requires understanding color contrast ratios, keyboard navigation, screen reader compatibility, and motion sensitivity. When designers prioritize accessibility from the beginning, they often discover that solutions benefit all users, not just those with disabilities. Inclusive design thinking leads to clearer typography, simpler navigation structures, and more intuitive interactions that enhance the entire user experience.",
         tools: ['Adobe Creative Suite', 'Prototype.js', 'WCAG Standards'],
         images: [
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
+            '/images/yumyumland/Cookie.png',
+            '/images/yumyumland/Cupcake.png',
+            '/images/yumyumland/Brownie.png',
         ],
     },
     {
