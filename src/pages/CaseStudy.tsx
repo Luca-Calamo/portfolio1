@@ -554,6 +554,23 @@ export default function CaseStudy() {
                             <h2 className={styles.sectionTitle}>
                                 Promotional Material
                             </h2>
+                            <div className={styles.subNumber}>7.1</div>
+                            <div className={styles.subHeading}>
+                                Promotional Video
+                            </div>
+                            <div className={styles.gridOne}>
+                                <iframe
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.1)',
+                                    }}
+                                    width='100%'
+                                    height='600'
+                                    src='https://www.youtube.com/embed/vWXMGQpBQfs'
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className={styles.subNumber}>7.2</div>
+                            <div className={styles.subHeading}>Brochure</div>
                             <div className={styles.gridTwo}>
                                 <img
                                     className={styles.bigImage}
@@ -573,6 +590,12 @@ export default function CaseStudy() {
                                         )
                                     }
                                 />
+                            </div>
+                            <div className={styles.subNumber}>7.3</div>
+                            <div className={styles.subHeading}>
+                                Business Card
+                            </div>
+                            <div className={styles.gridTwo}>
                                 <img
                                     className={styles.bigImage}
                                     src={
