@@ -580,6 +580,7 @@ export default function CaseStudy() {
                                             '/images/prolog/Brochure_1.png',
                                         )
                                     }
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
@@ -589,6 +590,7 @@ export default function CaseStudy() {
                                             '/images/prolog/Brochure_2.png',
                                         )
                                     }
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                             <div className={styles.subNumber}>7.3</div>
@@ -606,6 +608,7 @@ export default function CaseStudy() {
                                             '/images/prolog/Business_Card_Front.png',
                                         )
                                     }
+                                    style={{cursor: 'pointer'}}
                                 />
                                 <img
                                     className={styles.bigImage}
@@ -617,6 +620,7 @@ export default function CaseStudy() {
                                             '/images/prolog/Business_Card_Back.png',
                                         )
                                     }
+                                    style={{cursor: 'pointer'}}
                                 />
                             </div>
                         </div>
