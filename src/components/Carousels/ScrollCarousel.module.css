@@ -1,0 +1,211 @@
+@import url('https://fonts.bunny.net/css?family=jura:300,500');
+
+.carousel {
+    /* prev & next buttons */
+    --nav-btn-size: clamp(35px, 5vw, 54px);
+    --nav-btn-bg: rgb(15, 23, 43);
+    --nav-btn-txt: white;
+
+    /* item markers */
+    --nav-marker-bg: 20px;
+    --nav-marker-bg: rgb(15, 23, 43);
+
+    width: min(95vw, 90%);
+    max-width: 1000px;
+    height: calc(100vh - 120px);
+    list-style: none;
+    padding-block: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(140px, 18vw, 280px);
+    gap: 0;
+
+    @supports not selector(::scroll-marker-group) {
+        /* add gap for browsers that don't support ::scroll-* */
+        gap: 1rem;
+    }
+
+    anchor-name: --carousel;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    overscroll-behaviour-x: contain;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    /* empty pseudo elements to push first and last items to the middle */
+    &::before,
+    &::after {
+        content: '';
+    }
+
+    /**************** MARKERS GROUP *******************/
+    /* the item markers will be dynamically placed within this element */
+    scroll-marker-group: after; /* place after elements*/
+
+    &::scroll-marker-group {
+        display: none;
+    }
+
+    /* carousel item*/
+    > div {
+        position: relative;
+        scroll-snap-align: center; /* centers snap */
+        scroll-snap-stop: always; /* ensures that the scroll stops at each element */
+        container-type: scroll-state; /* define container for child animations */
+        z-index: 1;
+
+        display: grid;
+        grid-template-areas: 'img' 'title';
+        text-align: center;
+
+        /* snapped item (center/current) - bring to front */
+        @container scroll-state(snapped: inline) {
+            z-index: 10 !important;
+        }
+
+        /* scroll to this item on load */
+        &.scrollStart {
+            scroll-initial-target: nearest;
+        }
+
+        > * {
+            /* outline: 1px dashed red; */
+        }
+
+        /* item title/name */
+        > h2 {
+            grid-area: title;
+            margin: 0.5rem 0 0 0;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            white-space: nowrap;
+            transition: all 300ms ease-in-out;
+            /* not current item */
+            @container not scroll-state(snapped: inline) {
+                scale: 0.5;
+                opacity: 0.5;
+                translate: 0 -100px;
+            }
+        }
+
+        > .img {
+            grid-area: img;
+            width: 100%;
+            aspect-ratio: 3/4;
+            transition: all 300ms ease-in-out;
+            transform-origin: center center;
+            /* not current item */
+            @container not scroll-state(snapped: inline) {
+                scale: 0.5;
+                opacity: 0.5;
+            }
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                box-shadow: 0 10px 20px rgba(0 0 0 / 0.25);
+            }
+
+            & > video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                box-shadow: 0 10px 20px rgba(0 0 0 / 0.25);
+            }
+        }
+
+        /************** MARKERS **************/
+        &::scroll-marker {
+            content: ' ';
+            height: 20px;
+            aspect-ratio: 1;
+            background-color: var(--nav-marker-bg);
+            border-radius: 50%;
+            transition: 150ms ease-in-out;
+            scale: 0.75;
+            opacity: 0.25;
+        }
+
+        /* current item marker */
+        &::scroll-marker:target-current {
+            opacity: 1;
+            scale: 1;
+        }
+
+        /* hover and keyboard focus */
+        &::scroll-marker:where(:hover, :focus-visible) {
+            opacity: 1;
+        }
+
+        /* keyboard focus */
+        &::scroll-marker:focus-visible {
+            outline: 1px dashed var(--nav-marker-bg);
+            outline-offset: 4px;
+        }
+    }
+
+    /************* NAV BUTTONS(left and right) ************/
+    &::scroll-button(*) {
+        position: absolute;
+        position-anchor: --carousel;
+        width: var(--nav-btn-size);
+        aspect-ratio: 1/1;
+        font: inherit;
+        background-color: var(--nav-btn-bg);
+        display: grid;
+        place-content: center;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+        outline: 1px dashed transparent;
+        outline-offset: 0px;
+    }
+
+    /* button - prev */
+    &::scroll-button(inline-start) {
+        content: '❮';
+        left: calc(anchor(left) - var(--nav-btn-size));
+    }
+
+    /* button - next */
+    &::scroll-button(inline-end) {
+        content: '❯';
+        right: calc(anchor(right) - var(--nav-btn-size));
+    }
+
+    /* hover and keyboard focus */
+    &::scroll-button(*):not(:disabled):where(:hover, :focus-visible) {
+        opacity: 1;
+        scale: 1.1;
+    }
+
+    /* keyboard focus */
+    &::scroll-button(*):focus-visible {
+        outline: 1px dashed var(--nav-btn-bg);
+        outline-offset: 4px;
+    }
+
+    /* disabled */
+    &::scroll-button(*):disabled {
+        opacity: 0.25;
+        cursor: unset;
+    }
+}
+
+.msgSupports {
+    font-size: 0.8rem;
+    @supports selector(::scroll-marker-group) {
+        display: none;
+    }
+}
+
+.scrollStart {
+    scroll-initial-target: nearest;
+}

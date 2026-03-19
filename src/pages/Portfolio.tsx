@@ -1,34 +1,32 @@
 import {useState} from 'react';
 import {projects} from '../data/projects';
-import ParallaxCardSlider from '../components/Carousels/ParallaxCardSlider';
+import ScrollCarousel from '../components/Carousels/ScrollCarousel';
 import InfiniteScrollCarousel from '../components/Carousels/InfiniteScrollCarousel';
 import styles from './Portfolio.module.css';
 import carouselStyles from './CarouselToggle.module.css';
 
-type CarouselMode = 'parallax' | 'infinite';
+type CarouselMode = 'scroll' | 'infinite';
 
 export default function Portfolio() {
-    const [carouselMode, setCarouselMode] = useState<CarouselMode>('parallax');
+    const [carouselMode, setCarouselMode] = useState<CarouselMode>('scroll');
 
     return (
         <div className={styles.portfolio}>
             <div className={styles.container}>
-                <h1 className={styles.title}>Portfolio</h1>
-
                 {/* Carousel Mode Toggle */}
                 <div className={carouselStyles.toggleContainer}>
                     <div className={carouselStyles.toggleLabel}>View Mode:</div>
                     <div className={carouselStyles.toggleSwitch}>
                         <button
                             className={`${carouselStyles.toggleBtn} ${
-                                carouselMode === 'parallax'
+                                carouselMode === 'scroll'
                                     ? carouselStyles.active
                                     : ''
                             }`}
-                            onClick={() => setCarouselMode('parallax')}
-                            aria-pressed={carouselMode === 'parallax'}
+                            onClick={() => setCarouselMode('scroll')}
+                            aria-pressed={carouselMode === 'scroll'}
                         >
-                            3D Parallax
+                            Scroll Carousel
                         </button>
                         <button
                             className={`${carouselStyles.toggleBtn} ${
@@ -46,11 +44,8 @@ export default function Portfolio() {
 
                 {/* Carousel Display */}
                 <div className={carouselStyles.carouselWrapper}>
-                    {carouselMode === 'parallax' && (
-                        <ParallaxCardSlider
-                            projects={projects}
-                            key='parallax'
-                        />
+                    {carouselMode === 'scroll' && (
+                        <ScrollCarousel projects={projects} key='scroll' />
                     )}
                     {carouselMode === 'infinite' && (
                         <InfiniteScrollCarousel
