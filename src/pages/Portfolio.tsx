@@ -1,34 +1,65 @@
-import { Link } from "react-router-dom"
-import { projects } from "../data/projects"
-import styles from "./Portfolio.module.css"
+import {useState} from 'react';
+import {projects} from '../data/projects';
+import ParallaxCardSlider from '../components/Carousels/ParallaxCardSlider';
+import InfiniteScrollCarousel from '../components/Carousels/InfiniteScrollCarousel';
+import styles from './Portfolio.module.css';
+import carouselStyles from './CarouselToggle.module.css';
+
+type CarouselMode = 'parallax' | 'infinite';
 
 export default function Portfolio() {
+    const [carouselMode, setCarouselMode] = useState<CarouselMode>('parallax');
+
     return (
         <div className={styles.portfolio}>
             <div className={styles.container}>
                 <h1 className={styles.title}>Portfolio</h1>
-                <div className={styles.projectsList}>
-                    {projects.map((project) => (
-                        <Link
-                            key={project.id}
-                            to={`/project/${project.id}`}
-                            className={styles.projectItem}
+
+                {/* Carousel Mode Toggle */}
+                <div className={carouselStyles.toggleContainer}>
+                    <div className={carouselStyles.toggleLabel}>View Mode:</div>
+                    <div className={carouselStyles.toggleSwitch}>
+                        <button
+                            className={`${carouselStyles.toggleBtn} ${
+                                carouselMode === 'parallax'
+                                    ? carouselStyles.active
+                                    : ''
+                            }`}
+                            onClick={() => setCarouselMode('parallax')}
+                            aria-pressed={carouselMode === 'parallax'}
                         >
-                            <div className={styles.projectImage}>
-                                {project.heroImage.endsWith('.mp4') ? (
-                                    <video src={project.heroImage} autoPlay loop muted />
-                                ) : (
-                                    <img src={project.heroImage} alt={project.title} />
-                                )}
-                            </div>
-                            <div className={styles.projectInfo}>
-                                <h2>{project.title}</h2>
-                                <p>{project.year}</p>
-                            </div>
-                        </Link>
-                    ))}
+                            3D Parallax
+                        </button>
+                        <button
+                            className={`${carouselStyles.toggleBtn} ${
+                                carouselMode === 'infinite'
+                                    ? carouselStyles.active
+                                    : ''
+                            }`}
+                            onClick={() => setCarouselMode('infinite')}
+                            aria-pressed={carouselMode === 'infinite'}
+                        >
+                            Infinite Scroll
+                        </button>
+                    </div>
+                </div>
+
+                {/* Carousel Display */}
+                <div className={carouselStyles.carouselWrapper}>
+                    {carouselMode === 'parallax' && (
+                        <ParallaxCardSlider
+                            projects={projects}
+                            key='parallax'
+                        />
+                    )}
+                    {carouselMode === 'infinite' && (
+                        <InfiniteScrollCarousel
+                            projects={projects}
+                            key='infinite'
+                        />
+                    )}
                 </div>
             </div>
         </div>
-    )
+    );
 }
