@@ -113,6 +113,27 @@ export default function Project() {
                             </div>
                         </div>
                     </div>
+                    {project.links && project.links.length > 0 && (
+                        <div className={styles.linksSection}>
+                            <div className={styles.linksList}>
+                                {project.links.map((link, index) => (
+                                    <a
+                                        key={index}
+                                        href={link.url}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        className={styles.projectLink}
+                                    >
+                                        <span>
+                                            {link.type.charAt(0).toUpperCase() +
+                                                link.type.slice(1)}
+                                        </span>
+                                        <span className={styles.arrow}>→</span>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                     <div className={styles.mainImage}>
                         {project.heroImage.endsWith('.mp4') ? (
                             <video

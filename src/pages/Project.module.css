@@ -294,3 +294,40 @@
     text-align: center;
     font-size: 0.95rem;
 }
+
+.linksSection {
+    display: flex;
+    justify-content: center;
+}
+
+.linksList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #71068b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.projectLink:hover {
+    opacity: 0.6;
+}
+
+.projectLink span:last-child {
+    transition: transform 0.3s ease;
+}
+
+.projectLink:hover span:last-child {
+    transform: translateX(5px);
+}

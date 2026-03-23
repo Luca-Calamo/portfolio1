@@ -12,6 +12,10 @@ export interface Project {
         title: string;
         content: string;
     }>;
+    links?: Array<{
+        type: string;
+        url: string;
+    }>;
 }
 
 export const projects: Project[] = [
@@ -37,6 +41,21 @@ export const projects: Project[] = [
         sections: [],
     },
     {
+        id: 5,
+        role: 'Graphic Design',
+        title: 'YumYum Land',
+        year: 2024,
+        heroImage: '/images/yumyumland/Brownie.png',
+        description:
+            "Accessibility in design is not a feature—it's a fundamental principle. Creating interfaces that work for everyone, regardless of ability, requires understanding color contrast ratios, keyboard navigation, screen reader compatibility, and motion sensitivity. When designers prioritize accessibility from the beginning, they often discover that solutions benefit all users, not just those with disabilities. Inclusive design thinking leads to clearer typography, simpler navigation structures, and more intuitive interactions that enhance the entire user experience.",
+        tools: ['Adobe Illustrator', 'Adobe Photoshop'],
+        images: [
+            '/images/yumyumland/Cookie.png',
+            '/images/yumyumland/Cupcake.png',
+            '/images/yumyumland/Brownie.png',
+        ],
+    },
+    {
         id: 2,
         title: 'Geometea',
         role: 'Graphic Design / Marketing',
@@ -52,24 +71,8 @@ export const projects: Project[] = [
             '/images/can/Chamomile.png',
         ],
     },
-
     {
         id: 4,
-        role: 'UX/UI Design',
-        title: 'YumYum Land',
-        year: 2024,
-        heroImage: '/images/yumyumland/Brownie.png',
-        description:
-            "Accessibility in design is not a feature—it's a fundamental principle. Creating interfaces that work for everyone, regardless of ability, requires understanding color contrast ratios, keyboard navigation, screen reader compatibility, and motion sensitivity. When designers prioritize accessibility from the beginning, they often discover that solutions benefit all users, not just those with disabilities. Inclusive design thinking leads to clearer typography, simpler navigation structures, and more intuitive interactions that enhance the entire user experience.",
-        tools: ['Adobe Creative Suite', 'Prototype.js', 'WCAG Standards'],
-        images: [
-            '/images/yumyumland/Cookie.png',
-            '/images/yumyumland/Cupcake.png',
-            '/images/yumyumland/Brownie.png',
-        ],
-    },
-    {
-        id: 3,
         role: 'Design / Layout Design',
         title: 'G-Adventures Travel Magazine',
         year: 2024,
@@ -80,28 +83,32 @@ export const projects: Project[] = [
         images: [
             '/images/magazine/Rome_Mockup.png',
             '/images/magazine/Venice Spread Mockup.png',
-            // '/images/magazine/Rome Spread.png',
-            // '/images/magazine/Florence_Spread.png',
             '/images/magazine/Florence_Mockup.png',
             '/images/magazine/Cover Spread.png',
         ],
     },
     {
-        id: 5,
+        id: 3,
         role: 'Typography Design',
-        title: 'Project 4',
+        title: 'Bleach Poster',
         year: 2024,
-        heroImage: '/images/Under_Construction.jpeg',
+        heroImage: '/images/bleach/Ipad_Design.png',
         description:
             'Typography is the voice of visual design. The choice of typeface, weight, size, and spacing communicates tone and hierarchy before a single word is read. Modern type systems combine multiple font families to create depth and visual interest while maintaining readability. Understanding the psychology behind typeface selection—serifs for tradition and authority, sans-serifs for modernity and clarity—enables designers to align typography with brand messaging. When typography is done right, it becomes invisible, allowing the message to shine through clearly.',
-        tools: ['Typetool', 'FontLab', 'Font Awesome'],
-        images: [
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
+        tools: ['Adobe InDesign', 'Adobe Photoshop'],
+        images: ['/images/bleach/Poster_Design.png'],
+        links: [
+            {
+                type: 'Ipad Animation',
+                url: 'https://indd.adobe.com/view/479ac20c-915f-459c-b387-66339eb13449',
+            },
+            {
+                type: 'Poster Animation',
+                url: 'https://indd.adobe.com/view/b981c3b0-81f0-4143-858d-d1fd0ec418ab',
+            },
         ],
     },
+
     {
         id: 6,
         role: 'Design Research',
