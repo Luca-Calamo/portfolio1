@@ -54,24 +54,14 @@
         scroll-snap-align: center; /* centers snap */
         scroll-snap-stop: always; /* ensures that the scroll stops at each element */
         container-type: scroll-state; /* define container for child animations */
-        z-index: 1;
 
         display: grid;
         grid-template-areas: 'img' 'title';
         text-align: center;
 
-        /* snapped item (center/current) - bring to front */
-        @container scroll-state(snapped: inline) {
-            z-index: 10 !important;
-        }
-
         /* scroll to this item on load */
         &.scrollStart {
             scroll-initial-target: nearest;
-        }
-
-        > * {
-            /* outline: 1px dashed red; */
         }
 
         /* item title/name */
@@ -81,11 +71,13 @@
             font-size: clamp(0.9rem, 2vw, 1.2rem);
             white-space: nowrap;
             transition: all 300ms ease-in-out;
+
             /* not current item */
             @container not scroll-state(snapped: inline) {
                 scale: 0.5;
                 opacity: 0.5;
                 translate: 0 -100px;
+                z-index: -1;
             }
         }
 
@@ -99,6 +91,7 @@
             @container not scroll-state(snapped: inline) {
                 scale: 0.5;
                 opacity: 0.5;
+                z-index: -1;
             }
 
             & > img {
