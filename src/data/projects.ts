@@ -47,7 +47,7 @@ export const projects: Project[] = [
         year: 2024,
         heroImage: '/images/yumyumland/Brownie.png',
         description:
-            "Accessibility in design is not a feature—it's a fundamental principle. Creating interfaces that work for everyone, regardless of ability, requires understanding color contrast ratios, keyboard navigation, screen reader compatibility, and motion sensitivity. When designers prioritize accessibility from the beginning, they often discover that solutions benefit all users, not just those with disabilities. Inclusive design thinking leads to clearer typography, simpler navigation structures, and more intuitive interactions that enhance the entire user experience.",
+            'Food design transcends function—it communicates flavor, quality, and personality through visual language. Each dessert in YumYum Land was crafted with a distinct visual identity, using bold color palettes and expressive typography to capture the essence of its character. Through thoughtful illustration and strategic composition, the collection creates an engaging brand experience that invites curiosity and celebrates the joy of indulgence.',
         tools: ['Adobe Illustrator', 'Adobe Photoshop'],
         images: [
             '/images/yumyumland/Cookie.png',
