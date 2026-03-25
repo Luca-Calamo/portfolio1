@@ -94,7 +94,7 @@ export const projects: Project[] = [
         year: 2024,
         heroImage: '/images/bleach/Ipad_Design.png',
         description:
-            'Step into the stylish world of Bleach, where fashion meets fantasy. This exhibition celebrates the bold costumes of the series—from the flowing Shihakusho uniforms to the elaborate looks of the Arrancar and Sternritter. Each design reflects power, culture, and individuality.',
+            'Costume design in manga and anime transcends mere aesthetics — it communicates character identity, social hierarchy, and cultural significance through visual language. This museum exhibition explores how Bleach uses silhouette, color, and symbolic elements to distinguish characters and their narrative roles. From the structured elegance of Shihakusho uniforms to the elaborate, otherworldly designs of the Arrancar and Sternritter, each garment conveys power, conflict, and individuality. By showcasing these designs in detail, the exhibition reveals how exceptional character design elevates storytelling and creates instantly recognizable visual identities that transcend the page.',
 
         tools: ['Adobe InDesign', 'Adobe Photoshop'],
         images: ['/images/bleach/Poster_Design.png'],
