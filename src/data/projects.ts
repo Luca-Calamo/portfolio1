@@ -94,7 +94,8 @@ export const projects: Project[] = [
         year: 2024,
         heroImage: '/images/bleach/Ipad_Design.png',
         description:
-            'Typography is the voice of visual design. The choice of typeface, weight, size, and spacing communicates tone and hierarchy before a single word is read. Modern type systems combine multiple font families to create depth and visual interest while maintaining readability. Understanding the psychology behind typeface selection—serifs for tradition and authority, sans-serifs for modernity and clarity—enables designers to align typography with brand messaging. When typography is done right, it becomes invisible, allowing the message to shine through clearly.',
+            'Step into the stylish world of Bleach, where fashion meets fantasy. This exhibition celebrates the bold costumes of the series—from the flowing Shihakusho uniforms to the elaborate looks of the Arrancar and Sternritter. Each design reflects power, culture, and individuality.',
+
         tools: ['Adobe InDesign', 'Adobe Photoshop'],
         images: ['/images/bleach/Poster_Design.png'],
         links: [
