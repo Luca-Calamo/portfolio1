@@ -74,19 +74,25 @@ export default function ScrollCarousel({projects}: ScrollCarouselProps) {
                 return (
                     <div
                         key={project.id}
-                        className={index === 0 ? styles.scrollStart : ''}
+                        className={[
+                            styles.carouselItem,
+                            index === 0 && styles.carouselItemStart,
+                        ]
+                            .filter(Boolean)
+                            .join(' ')}
                         role='button'
                         tabIndex={0}
                         onClick={() => handleCardClick(project.id)}
                         onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
+                            if (e.key === 'Enter' || e.key === ' ')
                                 handleCardClick(project.id);
-                            }
                         }}
                         style={{cursor: 'pointer', zIndex}}
                     >
-                        <h2>{project.title}</h2>
-                        <div className={styles.img}>
+                        <h2 className={styles.carouselItemTitle}>
+                            {project.title}
+                        </h2>
+                        <div className={styles.carouselItemImage}>
                             {isVideo(project.heroImage) ? (
                                 <video
                                     src={project.heroImage}
