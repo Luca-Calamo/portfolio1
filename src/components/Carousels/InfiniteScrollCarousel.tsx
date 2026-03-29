@@ -95,7 +95,6 @@ export default function InfiniteScrollCarousel({
                                         autoPlay
                                         muted
                                         loop
-                                        loading='lazy'
                                     />
                                 ) : (
                                     <img
