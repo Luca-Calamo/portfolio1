@@ -1,0 +1,243 @@
+.gallery {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin: 60px 0;
+}
+
+.cardsContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(113, 6, 139, 0.15);
+    background: white;
+    transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.card video {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.cardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #71068b;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #999;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Stack effect for next and previous cards */
+.card:nth-child(1) {
+    transform: translateY(0) scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.card:nth-child(2) {
+    transform: translateY(20px) scale(0.95) rotateZ(1deg);
+    opacity: 0.6;
+}
+
+.card:nth-child(3) {
+    transform: translateY(40px) scale(0.9) rotateZ(-1deg);
+    opacity: 0.3;
+}
+
+.actions {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #71068b;
+    border: 2px solid #71068b;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 1;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 250ms ease;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #71068b;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        min-height: 500px;
+        margin: 40px 0;
+    }
+
+    .cards {
+        height: 350px;
+    }
+
+    .card {
+        width: 280px;
+        height: 360px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        min-height: 450px;
+        padding: 20px;
+    }
+
+    .cards {
+        height: 300px;
+    }
+
+    .card {
+        width: 240px;
+        height: 320px;
+    }
+
+    .card img {
+        height: 65%;
+    }
+
+    .cardContent {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .actions {
+        bottom: 20px;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        min-height: 400px;
+    }
+
+    .cards {
+        height: 280px;
+    }
+
+    .card {
+        width: 200px;
+        height: 280px;
+    }
+
+    .cardContent {
+        padding: 12px;
+    }
+
+    .card h3 {
+        font-size: 0.9rem;
+    }
+
+    .card p {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

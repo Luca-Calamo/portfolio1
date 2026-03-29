@@ -74,7 +74,7 @@ export const projects: Project[] = [
     {
         id: 4,
         role: 'Design / Layout Design',
-        title: 'G-Adventures Travel Magazine',
+        title: 'G-Adventures',
         year: 2024,
         heroImage: '/images/magazine/Front Cover Mockup.png',
         description:
