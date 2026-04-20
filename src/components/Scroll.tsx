@@ -6,10 +6,10 @@ interface ScrollProps {
 
 export default function Scroll({onClick}: ScrollProps) {
     return (
-        <button className={styles.container} onClick={onClick}>
-            <div className={styles.text}>SCROLL</div>
+        <button className={styles.scroll} onClick={onClick}>
+            <div className={styles.scroll__text}>SCROLL</div>
             <img
-                className={styles.arrow}
+                className={styles.scroll__arrow}
                 src='/images/icon/Purp Down Arrow No Fill.svg'
                 alt='Down arrow'
             />

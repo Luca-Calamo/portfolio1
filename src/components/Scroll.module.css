@@ -1,4 +1,4 @@
-.container {
+.scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,39 +10,39 @@
     transition: opacity 0.3s ease;
 }
 
-.container:hover {
+.scroll:hover {
     opacity: 0.7;
 }
 
-.text {
+.scroll__text {
     font-size: 1rem;
     letter-spacing: 1.5px;
     color: #71068b;
     font-weight: 550;
 }
 
-.arrow {
+.scroll__arrow {
     width: 36px;
     height: 36px;
 }
 
 @media (max-width: 1024px) {
-    .text {
+    .scroll__text {
         font-size: 0.9rem;
     }
 
-    .arrow {
+    .scroll__arrow {
         width: 32px;
         height: 32px;
     }
 }
 
 @media (max-width: 768px) {
-    .text {
+    .scroll__text {
         font-size: 0.85rem;
     }
 
-    .arrow {
+    .scroll__arrow {
         width: 28px;
         height: 28px;
     }

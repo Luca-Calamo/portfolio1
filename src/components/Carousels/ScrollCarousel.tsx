@@ -57,7 +57,7 @@ export default function ScrollCarousel({projects}: ScrollCarouselProps) {
 
     return (
         <section className={styles.carousel} ref={carouselRef}>
-            <p className={styles.msgSupports}>
+            <p className={styles['carousel__msg-supports']}>
                 Sorry, your browser doesn't support scroll-marker features
             </p>
 
@@ -75,8 +75,8 @@ export default function ScrollCarousel({projects}: ScrollCarouselProps) {
                     <div
                         key={project.id}
                         className={[
-                            styles.carouselItem,
-                            index === 0 && styles.carouselItemStart,
+                            styles.carousel__item,
+                            index === 0 && styles['carousel__item--start'],
                         ]
                             .filter(Boolean)
                             .join(' ')}
@@ -89,24 +89,21 @@ export default function ScrollCarousel({projects}: ScrollCarouselProps) {
                         }}
                         style={{cursor: 'pointer', zIndex}}
                     >
-                        <h2 className={styles.carouselItemTitle}>
+                        <h2 className={styles['carousel__item-title']}>
                             {project.title}
                         </h2>
-                        <div className={styles.carouselItemImage}>
+                        <div className={styles['carousel__item-image']}>
                             {isVideo(project.heroImage) ? (
                                 <video
+                                    className={styles['carousel__image-video']}
                                     src={project.heroImage}
                                     autoPlay
                                     muted
                                     loop
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                    }}
                                 />
                             ) : (
                                 <img
+                                    className={styles['carousel__image-img']}
                                     src={project.heroImage}
                                     alt={project.title}
                                     loading='lazy'

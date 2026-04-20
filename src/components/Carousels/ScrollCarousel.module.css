@@ -45,149 +45,153 @@
     }
 
     /* carousel item */
-    > .carouselItem {
-        position: relative;
-        scroll-snap-align: center; /* centers snap */
-        scroll-snap-stop: always; /* ensures that the scroll stops at each element */
-        container-type: scroll-state; /* define container for child animations */
+}
 
-        display: grid;
-        grid-template-areas: 'img' 'title';
-        text-align: center;
+.carousel__item {
+    position: relative;
+    scroll-snap-align: center; /* centers snap */
+    scroll-snap-stop: always; /* ensures that the scroll stops at each element */
+    container-type: scroll-state; /* define container for child animations */
 
-        /* scroll to this item on load */
-        &.carouselItemStart {
-            scroll-initial-target: nearest;
-        }
+    display: grid;
+    grid-template-areas: 'img' 'title';
+    text-align: center;
+}
 
-        /* item title/name */
-        > .carouselItemTitle {
-            grid-area: title;
-            margin: 0.5rem 0 0 0;
-            font-size: clamp(0.9rem, 2vw, 1.2rem);
-            white-space: nowrap;
-            transition: all 300ms ease-in-out;
+.carousel__item--start {
+    scroll-initial-target: nearest;
+}
 
-            /* not current item */
-            @container not scroll-state(snapped: inline) {
-                scale: 0.5;
-                opacity: 0.5;
-                translate: 0 -100px;
-                z-index: -1;
-            }
-        }
+/* item title/name */
+.carousel__item-title {
+    grid-area: title;
+    margin: 0.5rem 0 0 0;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    white-space: nowrap;
+    transition: all 300ms ease-in-out;
+}
 
-        > .carouselItemImage {
-            grid-area: img;
-            width: 100%;
-            aspect-ratio: 3/4;
-            transition: all 300ms ease-in-out;
-            transform-origin: center center;
-            /* not current item */
-            @container not scroll-state(snapped: inline) {
-                scale: 0.5;
-                opacity: 0.5;
-                z-index: -1;
-            }
-        }
-
-        > .carouselItemImage img,
-        > .carouselItemImage video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0 0 0 / 0.25);
-        }
-
-        /* item markers */
-        &::scroll-marker {
-            content: ' ';
-            height: 20px;
-            aspect-ratio: 1;
-            background-color: var(--nav-marker-bg);
-            border-radius: 50%;
-            transition: 150ms ease-in-out;
-            scale: 0.75;
-            opacity: 0.25;
-        }
-
-        /* current item marker */
-        &::scroll-marker:target-current {
-            opacity: 1;
-            scale: 1;
-        }
-
-        /* hover and keyboard focus */
-        &::scroll-marker:where(:hover, :focus-visible) {
-            opacity: 1;
-        }
-
-        /* keyboard focus */
-        &::scroll-marker:focus-visible {
-            outline: 1px dashed var(--nav-marker-bg);
-            outline-offset: 4px;
-        }
-    }
-
-    /* nav buttons */
-    &::scroll-button(*) {
-        position: absolute;
-        position-anchor: --carousel;
-        width: var(--nav-btn-size);
-        aspect-ratio: 1/1;
-        font: inherit;
-        background-color: var(--nav-btn-bg);
-        display: grid;
-        place-content: center;
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        opacity: 0.7;
-        cursor: pointer;
-        transition: all 150ms ease-in-out;
-        outline: 1px dashed transparent;
-        outline-offset: 0px;
-    }
-
-    /* button - prev */
-    &::scroll-button(inline-start) {
-        content: '❮';
-        left: calc(anchor(left) - var(--nav-btn-size));
-    }
-
-    /* button - next */
-    &::scroll-button(inline-end) {
-        content: '❯';
-        right: calc(anchor(right) - var(--nav-btn-size));
-    }
-
-    /* hover and keyboard focus */
-    &::scroll-button(*):not(:disabled):where(:hover, :focus-visible) {
-        opacity: 1;
-        scale: 1.1;
-    }
-
-    /* keyboard focus */
-    &::scroll-button(*):focus-visible {
-        outline: 1px dashed var(--nav-btn-bg);
-        outline-offset: 4px;
-    }
-
-    /* disabled */
-    &::scroll-button(*):disabled {
-        opacity: 0.25;
-        cursor: unset;
+/* not current item title */
+.carousel__item:not(.carousel__item--current) .carousel__item-title {
+    @container not scroll-state(snapped: inline) {
+        scale: 0.5;
+        opacity: 0.5;
+        translate: 0 -100px;
+        z-index: -1;
     }
 }
 
-.msgSupports {
+.carousel__item-image {
+    grid-area: img;
+    width: 100%;
+    aspect-ratio: 3/4;
+    transition: all 300ms ease-in-out;
+    transform-origin: center center;
+}
+
+/* not current item image */
+.carousel__item:not(.carousel__item--current) .carousel__item-image {
+    @container not scroll-state(snapped: inline) {
+        scale: 0.5;
+        opacity: 0.5;
+        z-index: -1;
+    }
+}
+
+.carousel__image-img,
+.carousel__image-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0 0 0 / 0.25);
+}
+
+/* item markers */
+.carousel::scroll-marker {
+    content: ' ';
+    height: 20px;
+    aspect-ratio: 1;
+    background-color: var(--nav-marker-bg);
+    border-radius: 50%;
+    transition: 150ms ease-in-out;
+    scale: 0.75;
+    opacity: 0.25;
+}
+
+/* current item marker */
+.carousel::scroll-marker:target-current {
+    opacity: 1;
+    scale: 1;
+}
+
+/* hover and keyboard focus */
+.carousel::scroll-marker:where(:hover, :focus-visible) {
+    opacity: 1;
+}
+
+/* keyboard focus */
+.carousel::scroll-marker:focus-visible {
+    outline: 1px dashed var(--nav-marker-bg);
+    outline-offset: 4px;
+}
+
+/* nav buttons */
+.carousel::scroll-button(*) {
+    position: absolute;
+    position-anchor: --carousel;
+    width: var(--nav-btn-size);
+    aspect-ratio: 1/1;
+    font: inherit;
+    background-color: var(--nav-btn-bg);
+    display: grid;
+    place-content: center;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    outline: 1px dashed transparent;
+    outline-offset: 0px;
+}
+
+/* button - prev */
+.carousel::scroll-button(inline-start) {
+    content: '❮';
+    left: calc(anchor(left) - var(--nav-btn-size));
+}
+
+/* button - next */
+.carousel::scroll-button(inline-end) {
+    content: '❯';
+    right: calc(anchor(right) - var(--nav-btn-size));
+}
+
+/* hover and keyboard focus */
+.carousel::scroll-button(*):not(:disabled):where(:hover, :focus-visible) {
+    opacity: 1;
+    scale: 1.1;
+}
+
+/* keyboard focus */
+.carousel::scroll-button(*):focus-visible {
+    outline: 1px dashed var(--nav-btn-bg);
+    outline-offset: 4px;
+}
+
+/* disabled */
+.carousel::scroll-button(*):disabled {
+    opacity: 0.25;
+    cursor: unset;
+}
+
+.carousel__msg-supports {
     font-size: 0.8rem;
-    @supports selector(::scroll-marker-group) {
+}
+
+@supports selector(::scroll-marker-group) {
+    .carousel__msg-supports {
         display: none;
     }
-}
-
-.carouselItemStart {
-    scroll-initial-target: nearest;
 }
