@@ -26,23 +26,32 @@ export default function Home() {
                             to={`/project/${project.id}`}
                             className={styles.masonryItem}
                         >
-                            {project.heroImage.endsWith('.mp4') ? (
-                                <video
-                                    src={project.heroImage}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    className={styles.image}
-                                />
-                            ) : (
-                                <img
-                                    src={project.heroImage}
-                                    alt={project.title}
-                                    className={styles.image}
-                                />
-                            )}
-                            <div className={styles.overlay}>
-                                <h3>{project.title}</h3>
+                            <div className={styles.mediaFrame}>
+                                {project.heroImage.endsWith('.mp4') ? (
+                                    <video
+                                        src={project.heroImage}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className={styles.image}
+                                    />
+                                ) : (
+                                    <img
+                                        src={project.heroImage}
+                                        alt={project.title}
+                                        loading='lazy'
+                                        className={styles.image}
+                                    />
+                                )}
+                            </div>
+                            <div className={styles.cardMeta}>
+                                <p className={styles.cardEyebrow}>
+                                    {project.role} • {project.year}
+                                </p>
+                                <h3 className={styles.cardTitle}>
+                                    {project.title}
+                                </h3>
                             </div>
                         </Link>
                     ))}

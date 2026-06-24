@@ -40,6 +40,7 @@ export const projects: Project[] = [
         images: ['/images/img1.png', '/images/img2.png'],
         sections: [],
     },
+
     {
         id: 5,
         role: 'Graphic Design',
@@ -53,6 +54,22 @@ export const projects: Project[] = [
             '/images/yumyumland/Cookie.png',
             '/images/yumyumland/Cupcake.png',
             '/images/yumyumland/Brownie.png',
+        ],
+    },
+    {
+        id: 6,
+        role: 'Graphic Design',
+        title: 'League of Legends Poster',
+        year: 2025,
+        heroImage: 'public/images/LOL/Jinx_Image.png',
+        description:
+            "User research and data-driven design decisions separate great designs from mediocre ones. By conducting user interviews, usability testing, and analyzing behavioral data, designers gain insight into real user needs and pain points. This information informs every design decision from information architecture to microinteractions. When design is rooted in user understanding rather than assumptions, the result is a product that resonates with its audience and solves actual problems. Data-driven design is not about removing creativity—it's about directing creativity toward meaningful solutions.",
+        tools: ['Hotjar', 'Maze', 'Google Analytics'],
+        images: [
+            '/images/Under_Construction.jpeg',
+            '/images/Under_Construction.jpeg',
+            '/images/Under_Construction.jpeg',
+            '/images/Under_Construction.jpeg',
         ],
     },
     {
@@ -71,6 +88,7 @@ export const projects: Project[] = [
             '/images/can/Chamomile.png',
         ],
     },
+
     {
         id: 4,
         role: 'Design / Layout Design',
@@ -107,23 +125,6 @@ export const projects: Project[] = [
                 type: 'Poster Animation',
                 url: 'https://indd.adobe.com/view/b981c3b0-81f0-4143-858d-d1fd0ec418ab',
             },
-        ],
-    },
-
-    {
-        id: 6,
-        role: 'Design Research',
-        title: 'Project 5',
-        year: 2024,
-        heroImage: '/images/Under_Construction.jpeg',
-        description:
-            "User research and data-driven design decisions separate great designs from mediocre ones. By conducting user interviews, usability testing, and analyzing behavioral data, designers gain insight into real user needs and pain points. This information informs every design decision from information architecture to microinteractions. When design is rooted in user understanding rather than assumptions, the result is a product that resonates with its audience and solves actual problems. Data-driven design is not about removing creativity—it's about directing creativity toward meaningful solutions.",
-        tools: ['Hotjar', 'Maze', 'Google Analytics'],
-        images: [
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
         ],
     },
 ];
