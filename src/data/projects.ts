@@ -59,7 +59,7 @@ export const projects: Project[] = [
     {
         id: 6,
         role: 'Graphic Design',
-        title: 'League of Legends Poster',
+        title: 'League of Legends Posters',
         year: 2025,
         heroImage: '/images/LOL/Jinx_Image.png',
         description:
