@@ -61,16 +61,11 @@ export const projects: Project[] = [
         role: 'Graphic Design',
         title: 'League of Legends Poster',
         year: 2025,
-        heroImage: 'public/images/LOL/Jinx_Image.png',
+        heroImage: '/images/LOL/Jinx_Image.png',
         description:
-            "User research and data-driven design decisions separate great designs from mediocre ones. By conducting user interviews, usability testing, and analyzing behavioral data, designers gain insight into real user needs and pain points. This information informs every design decision from information architecture to microinteractions. When design is rooted in user understanding rather than assumptions, the result is a product that resonates with its audience and solves actual problems. Data-driven design is not about removing creativity—it's about directing creativity toward meaningful solutions.",
-        tools: ['Hotjar', 'Maze', 'Google Analytics'],
-        images: [
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-            '/images/Under_Construction.jpeg',
-        ],
+            "These character posters explore how color and composition communicate opposing ideologies through visual language. By establishing distinct design systems—Jinx's chaotic magenta energy versus Vi's structured crimson authority—the posters function as a visual diptych that transforms character design into storytelling, examining how contrasting aesthetics can convey fractured sisterhood and conflicting values.",
+        tools: ['Adobe Photoshop', 'Adobe Illustrator'],
+        images: ['/images/LOL/Vi_Image.png'],
     },
     {
         id: 2,
