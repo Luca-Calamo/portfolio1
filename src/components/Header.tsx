@@ -21,14 +21,6 @@ export default function Header() {
                         {/* <span>LUCA CALAMO</span> */}
                     </span>
                 </Link>
-                <nav className={styles.nav}>
-                    <Link to='/' className={styles.link}>
-                        Home
-                    </Link>
-                    <Link to='/portfolio' className={styles.link}>
-                        Portfolio
-                    </Link>
-                </nav>
             </div>
         </header>
     );
